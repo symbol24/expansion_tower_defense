@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://csil8firhalbu"]
+
+[ext_resource type="Script" uid="uid://dtnwcxm350lyv" path="res://code/ui/building_button.gd" id="1_4e26u"]
+[ext_resource type="TileSet" uid="uid://dd61axkqlofl7" path="res://data/tileset/level_tileset.tres" id="1_wd8q0"]
+
+[node name="building_button" type="Control"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1216.0
+offset_bottom = -656.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+script = ExtResource("1_4e26u")
+
+[node name="tile_map" type="TileMapLayer" parent="."]
+unique_name_in_owner = true
+tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 15, 0, 3, 0, 0, 0)
+tile_set = ExtResource("1_wd8q0")
+
+[node name="over" type="Panel" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_type_variation = &"bulding_button_normal"

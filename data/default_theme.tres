@@ -1,0 +1,50 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://b62vl07cjqys3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oxuqd"]
+bg_color = Color(0.176471, 0.176471, 0.176471, 0.54902)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x3fhk"]
+bg_color = Color(0.771969, 0.00944722, 0.193228, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yoa6b"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0.580192, 0.262451, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_47hc6"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uiit7"]
+bg_color = Color(0.662745, 0.662745, 0.662745, 0.231373)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.662745, 0.662745, 0.662745, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+anti_aliasing = false
+
+[resource]
+default_font_size = 8
+BuildMenuTitle/base_type = &"Label"
+BuildMenuTitle/font_sizes/font_size = 32
+building_hp_bar/base_type = &"ProgressBar"
+building_hp_bar/styles/background = SubResource("StyleBoxFlat_oxuqd")
+building_hp_bar/styles/fill = SubResource("StyleBoxFlat_x3fhk")
+bulding_button_hover/base_type = &"Panel"
+bulding_button_hover/styles/panel = SubResource("StyleBoxFlat_yoa6b")
+bulding_button_normal/base_type = &"Panel"
+bulding_button_normal/styles/panel = SubResource("StyleBoxFlat_47hc6")
+selection_box/base_type = &"Panel"
+selection_box/styles/panel = SubResource("StyleBoxFlat_uiit7")

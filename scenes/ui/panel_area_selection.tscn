@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlh7ui37qv4ke"]
+
+[ext_resource type="Script" uid="uid://lfww5jfgi7f2" path="res://code/ui/panel_area_selection.gd" id="1_ohmpl"]
+
+[node name="build_area_panel" type="Panel"]
+custom_minimum_size = Vector2(64, 64)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1216.0
+offset_bottom = -656.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"selection_box"
+script = ExtResource("1_ohmpl")

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="BuildingData" load_steps=2 format=3 uid="uid://c3br4x44lnwgi"]
+
+[ext_resource type="Script" uid="uid://dl5j2rxdbtx5a" path="res://code/buildings/building_data.gd" id="1_p7l1q"]
+
+[resource]
+script = ExtResource("1_p7l1q")
+id = &"bank"
+coords = Vector2i(16, 2)
+path = "res://scenes/buildings/bank.tscn"
+metadata/_custom_type_script = "uid://dl5j2rxdbtx5a"

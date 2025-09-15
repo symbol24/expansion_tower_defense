@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://vq2im5766beo"]
+
+[ext_resource type="Texture2D" uid="uid://bfwq11exl50s1" path="res://textures/16x16_material.png" id="1_o75gr"]
+[ext_resource type="Script" uid="uid://b633rsx6vucok" path="res://code/ui/floater_resource.gd" id="2_tb8rb"]
+
+[node name="FloaterMaterial" type="TextureRect"]
+texture = ExtResource("1_o75gr")
+script = ExtResource("2_tb8rb")

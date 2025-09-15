@@ -1,10 +1,31 @@
-[gd_resource type="Theme" load_steps=6 format=3 uid="uid://b62vl07cjqys3"]
+[gd_resource type="Theme" load_steps=9 format=3 uid="uid://b62vl07cjqys3"]
+
+[ext_resource type="FontFile" uid="uid://tekr0gmalfw5" path="res://data/m5x7.ttf" id="1_x3fhk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vjq4v"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.0745098, 0.0745098, 0.0745098, 0.866667)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+anti_aliasing = false
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oxuqd"]
 bg_color = Color(0.176471, 0.176471, 0.176471, 0.54902)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x3fhk"]
 bg_color = Color(0.771969, 0.00944722, 0.193228, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e74n4"]
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+anti_aliasing = false
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yoa6b"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -36,12 +57,42 @@ corner_radius_bottom_left = 4
 anti_aliasing = false
 
 [resource]
+default_font = ExtResource("1_x3fhk")
 default_font_size = 8
+BB_LABEL/base_type = &"Label"
+BB_LABEL/colors/font_outline_color = Color(0, 0, 0, 1)
+BB_LABEL/constants/outline_size = 3
+BB_LABEL/font_sizes/font_size = 26
+BB_description_label/base_type = &"Label"
+BB_description_label/font_sizes/font_size = 18
+BB_description_panel/base_type = &"PanelContainer"
+BB_description_panel/styles/panel = SubResource("StyleBoxFlat_vjq4v")
+BB_negative_label/base_type = &"Label"
+BB_negative_label/colors/font_color = Color(0.664639, 0, 0.201939, 1)
+BB_negative_label/colors/font_outline_color = Color(0, 0, 0, 1)
+BB_negative_label/constants/outline_size = 3
+BB_negative_label/font_sizes/font_size = 22
+BB_positive_label/base_type = &"Label"
+BB_positive_label/colors/font_color = Color(0, 0.670588, 0.384314, 1)
+BB_positive_label/colors/font_outline_color = Color(0, 0, 0, 1)
+BB_positive_label/constants/outline_size = 3
+BB_positive_label/font_sizes/font_size = 22
 BuildMenuTitle/base_type = &"Label"
 BuildMenuTitle/font_sizes/font_size = 32
+MM_TITLE/base_type = &"Label"
+MM_TITLE/font_sizes/font_size = 72
+RID_LOGO/base_type = &"Label"
+RID_LOGO/font_sizes/font_size = 64
+Res_Label_Negative/base_type = &"Label"
+Res_Label_Negative/colors/font_color = Color(0.664639, 0, 0.201939, 1)
+Res_Label_Negative/font_sizes/font_size = 48
+Res_Labels/base_type = &"Label"
+Res_Labels/font_sizes/font_size = 48
 building_hp_bar/base_type = &"ProgressBar"
 building_hp_bar/styles/background = SubResource("StyleBoxFlat_oxuqd")
 building_hp_bar/styles/fill = SubResource("StyleBoxFlat_x3fhk")
+bulding_button_back_normal/base_type = &"Panel"
+bulding_button_back_normal/styles/panel = SubResource("StyleBoxFlat_e74n4")
 bulding_button_hover/base_type = &"Panel"
 bulding_button_hover/styles/panel = SubResource("StyleBoxFlat_yoa6b")
 bulding_button_normal/base_type = &"Panel"

@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1cfio3uhi0nx"]
+
+[ext_resource type="Script" uid="uid://doxyipjbrjyrw" path="res://code/ui/main_menu.gd" id="1_sl1te"]
+[ext_resource type="Script" uid="uid://04dklxbue446" path="res://code/ui/debug_play_button.gd" id="2_fe2o3"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_sl1te")
+id = &"main_menu"
+metadata/_custom_type_script = "uid://djv2srvbephrn"
+
+[node name="title" type="Label" parent="."]
+custom_minimum_size = Vector2(1280, 64)
+layout_mode = 0
+offset_top = 162.0
+offset_right = 1280.0
+offset_bottom = 226.0
+theme_type_variation = &"MM_TITLE"
+text = "GAME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+custom_minimum_size = Vector2(256, 84)
+layout_mode = 0
+offset_left = 512.0
+offset_top = 360.0
+offset_right = 768.0
+offset_bottom = 444.0
+theme_override_font_sizes/font_size = 72
+text = "PLAY"
+script = ExtResource("2_fe2o3")

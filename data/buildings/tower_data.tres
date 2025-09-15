@@ -5,6 +5,15 @@
 [resource]
 script = ExtResource("1_teool")
 id = &"tower"
+description = ""
 coords = Vector2i(0, 0)
 path = "res://scenes/buildings/tower.tscn"
+tick_building = true
+money_cost = 0
+power_cost = 0
+material_cost = 0
+money_production = 1
+power_production = 5
+material_production = 1
+starting_hp = 100
 metadata/_custom_type_script = "uid://dl5j2rxdbtx5a"

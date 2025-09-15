@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0kenuln0fpc2"]
+
+[ext_resource type="Script" uid="uid://p3crppx1lh6d" path="res://code/autoloads/scene_manager.gd" id="1_aogjr"]
+
+[node name="SceneManager" type="Node"]
+script = ExtResource("1_aogjr")
+scenes_lo_load = {
+&"level": "res://scenes/levels/level.tscn",
+&"main_menu": "res://scenes/levels/main_menu_node.tscn"
+}
+extra_loading_time = 3.0

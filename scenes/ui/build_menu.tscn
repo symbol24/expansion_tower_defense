@@ -34,3 +34,23 @@ offset_top = -80.0
 offset_right = 140.0
 offset_bottom = -16.0
 theme_override_constants/separation = 8
+
+[node name="description_panel" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(192, 64)
+layout_mode = 0
+offset_left = -96.0
+offset_right = 96.0
+offset_bottom = 64.0
+theme_type_variation = &"BB_description_panel"
+
+[node name="description_label" type="Label" parent="description_panel"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 1
+theme_type_variation = &"BB_description_label"
+text = "description goes here"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+text_overrun_behavior = 1

@@ -5,6 +5,14 @@
 [resource]
 script = ExtResource("1_67td2")
 id = &"tesla_coil"
+description = "Fires at enemies in a radius."
 coords = Vector2i(14, 0)
 path = "res://scenes/buildings/tesla_coil.tscn"
+money_cost = 2
+power_cost = 3
+material_cost = 2
+money_production = 0
+power_production = 0
+material_production = 0
+starting_hp = 100
 metadata/_custom_type_script = "uid://dl5j2rxdbtx5a"

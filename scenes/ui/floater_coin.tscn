@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bh1k06yhyol5p"]
+
+[ext_resource type="Texture2D" uid="uid://3v2xp2pdyrrc" path="res://textures/16x16_coin.png" id="1_h6l20"]
+[ext_resource type="Script" uid="uid://b633rsx6vucok" path="res://code/ui/floater_resource.gd" id="2_3y3tm"]
+
+[node name="CoinFloater" type="TextureRect"]
+offset_right = 16.0
+offset_bottom = 16.0
+pivot_offset = Vector2(8, 8)
+texture = ExtResource("1_h6l20")
+script = ExtResource("2_3y3tm")
+type = &"coin"

@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://csil8firhalbu"]
+[gd_scene load_steps=6 format=3 uid="uid://csil8firhalbu"]
 
 [ext_resource type="Script" uid="uid://dtnwcxm350lyv" path="res://code/ui/building_button.gd" id="1_4e26u"]
 [ext_resource type="TileSet" uid="uid://dd61axkqlofl7" path="res://data/tileset/level_tileset.tres" id="1_wd8q0"]
+[ext_resource type="Texture2D" uid="uid://3v2xp2pdyrrc" path="res://textures/16x16_coin.png" id="3_m5pc3"]
+[ext_resource type="Texture2D" uid="uid://bfwq11exl50s1" path="res://textures/16x16_material.png" id="4_n7u7f"]
+[ext_resource type="Texture2D" uid="uid://n4wxf07sod4d" path="res://textures/16x16_power.png" id="5_uy1n7"]
 
 [node name="building_button" type="Control"]
 custom_minimum_size = Vector2(64, 64)
@@ -16,6 +19,14 @@ grow_vertical = 2
 size_flags_horizontal = 6
 script = ExtResource("1_4e26u")
 
+[node name="back" type="Panel" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+theme_type_variation = &"bulding_button_back_normal"
+
 [node name="tile_map" type="TileMapLayer" parent="."]
 unique_name_in_owner = true
 tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 15, 0, 3, 0, 0, 0)
@@ -25,6 +36,71 @@ tile_set = ExtResource("1_wd8q0")
 unique_name_in_owner = true
 custom_minimum_size = Vector2(64, 64)
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 64.0
+offset_bottom = 64.0
 theme_type_variation = &"bulding_button_normal"
+
+[node name="power" type="Label" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 0
+offset_left = -3.0
+offset_top = 14.0
+offset_right = 27.0
+offset_bottom = 36.0
+theme_type_variation = &"BB_LABEL"
+text = "00"
+horizontal_alignment = 1
+
+[node name="materials" type="Label" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -25.0
+offset_top = 14.0
+offset_right = 5.0
+offset_bottom = 36.0
+grow_horizontal = 0
+theme_type_variation = &"BB_LABEL"
+text = "00"
+horizontal_alignment = 1
+
+[node name="money" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 14.0
+offset_top = 43.0
+offset_right = 54.0
+offset_bottom = 65.0
+theme_type_variation = &"BB_LABEL"
+text = "0000"
+vertical_alignment = 1
+
+[node name="16x16Coin" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 47.0
+offset_right = 14.0
+offset_bottom = 63.0
+mouse_filter = 2
+texture = ExtResource("3_m5pc3")
+
+[node name="16x16Material" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 1.0
+offset_right = 62.0
+offset_bottom = 17.0
+mouse_filter = 2
+texture = ExtResource("4_n7u7f")
+
+[node name="16x16Power" type="TextureRect" parent="."]
+layout_mode = 0
+offset_top = 1.0
+offset_right = 16.0
+offset_bottom = 17.0
+mouse_filter = 2
+texture = ExtResource("5_uy1n7")

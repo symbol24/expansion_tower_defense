@@ -1,0 +1,88 @@
+[gd_scene load_steps=6 format=3 uid="uid://vt6qklri7tl"]
+
+[ext_resource type="Script" uid="uid://dxj8xo24lln61" path="res://code/ui/play_ui.gd" id="1_e8yxp"]
+[ext_resource type="Texture2D" uid="uid://3v2xp2pdyrrc" path="res://textures/16x16_coin.png" id="2_e8yxp"]
+[ext_resource type="Texture2D" uid="uid://bfwq11exl50s1" path="res://textures/16x16_material.png" id="3_55wvk"]
+[ext_resource type="Texture2D" uid="uid://n4wxf07sod4d" path="res://textures/16x16_power.png" id="4_j1cpi"]
+[ext_resource type="Script" uid="uid://cx82ekoylkqet" path="res://code/ui/resource_icon_floaters.gd" id="5_55wvk"]
+
+[node name="PlayUi" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_e8yxp")
+id = &"play_ui"
+metadata/_custom_type_script = "uid://djv2srvbephrn"
+
+[node name="resource_panel" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(720, 64)
+layout_mode = 0
+offset_left = 280.0
+offset_top = 32.0
+offset_right = 1000.0
+offset_bottom = 96.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="resource_panel"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="TextureRect" type="TextureRect" parent="resource_panel/HBoxContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_e8yxp")
+
+[node name="coins" type="Label" parent="resource_panel/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 32)
+layout_mode = 2
+size_flags_vertical = 1
+theme_type_variation = &"Res_Labels"
+text = "00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="resource_panel/HBoxContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("3_55wvk")
+
+[node name="materials" type="Label" parent="resource_panel/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 32)
+layout_mode = 2
+size_flags_vertical = 1
+theme_type_variation = &"Res_Labels"
+text = "00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect3" type="TextureRect" parent="resource_panel/HBoxContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("4_j1cpi")
+
+[node name="power" type="Label" parent="resource_panel/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 32)
+layout_mode = 2
+size_flags_vertical = 1
+theme_type_variation = &"Res_Labels"
+text = "00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="resource_icon_floaters" type="Control" parent="."]
+custom_minimum_size = Vector2(1280, 720)
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+script = ExtResource("5_55wvk")
+
+[node name="positioner" type="Node2D" parent="resource_icon_floaters"]
+unique_name_in_owner = true

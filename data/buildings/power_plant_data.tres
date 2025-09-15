@@ -5,6 +5,15 @@
 [resource]
 script = ExtResource("1_aluuf")
 id = &"power_plant"
+description = "Increases available power by X."
 coords = Vector2i(15, 2)
 path = "res://scenes/buildings/power_plant.tscn"
+tick_building = true
+money_cost = 2
+power_cost = 0
+material_cost = 2
+money_production = 0
+power_production = 5
+material_production = 0
+starting_hp = 100
 metadata/_custom_type_script = "uid://dl5j2rxdbtx5a"

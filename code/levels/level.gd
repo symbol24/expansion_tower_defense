@@ -6,6 +6,7 @@ var _input:MainGameInputProcess
 
 func _ready() -> void:
 	_setup_main_game_input()
+	Signals.toggle_rid_control.emit(&"play_ui", &"", true)
 
 
 func _setup_main_game_input() -> void:

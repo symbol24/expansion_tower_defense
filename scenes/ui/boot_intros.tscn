@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=3 uid="uid://cw10lmfom02t0"]
+
+[ext_resource type="Script" uid="uid://ba4gk7rebjy44" path="res://code/ui/boot_intros.gd" id="1_2l38a"]
+[ext_resource type="Texture2D" uid="uid://c5ayft3oiheqi" path="res://textures/godot file 2.svg" id="2_jhsfs"]
+[ext_resource type="Texture2D" uid="uid://bv1gpoddn2ide" path="res://textures/GWJ-Full-Logo-noBG.svg" id="3_6mmkb"]
+[ext_resource type="Texture2D" uid="uid://ddvj3wts1uoo2" path="res://textures/logo_back_mini.png" id="4_rfgpk"]
+
+[node name="BootIntros" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_2l38a")
+id = &"boot_intros"
+metadata/_custom_type_script = "uid://djv2srvbephrn"
+
+[node name="background" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(1290, 730)
+layout_mode = 0
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 1285.0
+offset_bottom = 725.0
+color = Color(0.0784314, 0.133333, 0.25098, 1)
+
+[node name="godot_logo" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 140.0
+offset_top = -140.0
+offset_right = 2140.0
+offset_bottom = 1860.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_jhsfs")
+
+[node name="wild_jam" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 316.0
+offset_top = 113.0
+offset_right = 1396.0
+offset_bottom = 935.0
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_6mmkb")
+
+[node name="rid_logo" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 376.0
+offset_top = 60.0
+offset_right = 1176.0
+offset_bottom = 860.0
+scale = Vector2(0.66, 0.66)
+texture = ExtResource("4_rfgpk")
+
+[node name="rid_name" type="Label" parent="."]
+visible = false
+custom_minimum_size = Vector2(1280, 64)
+layout_mode = 0
+offset_top = 535.0
+offset_right = 1280.0
+offset_bottom = 599.0
+theme_type_variation = &"RID_LOGO"
+text = "ROBOTS IN DISGUISE"
+horizontal_alignment = 1
+vertical_alignment = 1

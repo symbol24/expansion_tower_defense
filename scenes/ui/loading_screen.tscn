@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://b162esw5gph7y"]
+
+[ext_resource type="Script" uid="uid://cgjqvsceug5km" path="res://code/ui/loading_screen.gd" id="1_q4fso"]
+[ext_resource type="Texture2D" uid="uid://2uyfeghxmw3p" path="res://icon.svg" id="1_rqdcv"]
+
+[node name="LoadingScreen" type="Control"]
+top_level = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q4fso")
+
+[node name="background" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(1290, 730)
+layout_mode = 0
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 1285.0
+offset_bottom = 725.0
+color = Color(0.0745098, 0.0745098, 0.0745098, 1)
+
+[node name="logo" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 1088.0
+offset_top = 528.0
+offset_right = 1216.0
+offset_bottom = 656.0
+pivot_offset = Vector2(64, 64)
+texture = ExtResource("1_rqdcv")

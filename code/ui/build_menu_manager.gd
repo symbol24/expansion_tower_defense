@@ -1,11 +1,7 @@
 class_name BuildMenuManager extends Control
 
 
-const CELL_SIZE := 64
-const MAP_SIZE := Vector2i(2560, 1440)
-const SCREEN_START := Vector2i(640, 360)
 const DIRECTIONS := ["up", "down", "left", "right"]
-const OFFSET := Vector2(-32, -32)
 const MOUSE_OUT_AWAIT := 0.2
 
 
@@ -62,13 +58,13 @@ func _mouse_over_building(building:Building) -> void:
 		for each in _panels:
 			match DIRECTIONS[i]:
 				"up":
-					each.global_position = Vector2(building.global_position.x, building.global_position.y - CELL_SIZE) + OFFSET
+					each.global_position = Vector2(building.global_position.x, building.global_position.y - Data.CELL_SIZE) - Data.OFFSET
 				"down":
-					each.global_position = Vector2(building.global_position.x, building.global_position.y + CELL_SIZE) + OFFSET
+					each.global_position = Vector2(building.global_position.x, building.global_position.y + Data.CELL_SIZE) - Data.OFFSET
 				"left":
-					each.global_position = Vector2(building.global_position.x - CELL_SIZE, building.global_position.y) + OFFSET
+					each.global_position = Vector2(building.global_position.x - Data.CELL_SIZE, building.global_position.y) - Data.OFFSET
 				"right":
-					each.global_position = Vector2(building.global_position.x + CELL_SIZE, building.global_position.y) + OFFSET
+					each.global_position = Vector2(building.global_position.x + Data.CELL_SIZE, building.global_position.y) - Data.OFFSET
 			
 			if _grid[each.global_position/64 as Vector2i] == null: each.show()
 			i += 1
@@ -82,6 +78,7 @@ func _populate_panels() -> void:
 	for i in 4:
 		var new_panel:BuildAreaPanel = Data.build_area_panel.duplicate()
 		add_child(new_panel)
+		new_panel.set_deferred(&"size", Vector2(Data.CELL_SIZE, Data.CELL_SIZE))
 		_panels.append(new_panel)
 
 
@@ -112,7 +109,7 @@ func _close_build_menus() -> void:
 
 
 func _setup_grid() -> void:
-	var grid_size:Vector2i = MAP_SIZE / CELL_SIZE
+	var grid_size:Vector2i = Data.MAP_SIZE / Data.CELL_SIZE
 
 	for x in grid_size.x:
 		for y in grid_size.y:
@@ -120,5 +117,5 @@ func _setup_grid() -> void:
 
 
 func _add_building(new_building:Building) -> void:
-	var coords:Vector2i = Vector2i(new_building.global_position.x-CELL_SIZE/2, new_building.global_position.y-CELL_SIZE/2) / CELL_SIZE
+	var coords:Vector2i = Vector2i(new_building.global_position.x-Data.CELL_SIZE/2, new_building.global_position.y-Data.CELL_SIZE/2) / Data.CELL_SIZE
 	_grid[coords] = new_building

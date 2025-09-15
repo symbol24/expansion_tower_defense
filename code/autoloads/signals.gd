@@ -6,6 +6,7 @@ signal load_scene(id:StringName, disply_loading:bool, extra_time:bool)
 
 # GAMEMANAGER
 signal tick
+signal start_match
 signal building_purchase_result(building_data:BuildingData, approved:bool)
 signal add_resources(building:Building)
 signal updated_resources(money:int, materials:int)
@@ -35,6 +36,13 @@ signal build_request(building_data:BuildingData)
 signal toggle_loading_screen(display:bool)
 signal spawn_resource_floater(type:String, _position:Vector2)
 signal return_floater_resource(floater:FloaterResource)
+
+# EFFECTS
+signal add_effect(effect:EffectData)
+signal remove_effect(effect:EffectData)
+
+# ENEMIES
+signal return_enemy_to_pool(enemy:Enemy)
 
 # OTHER
 signal level_ready

@@ -4,8 +4,6 @@ class_name ResourceIconFloaters extends Control
 var _coin_pool:Array[TextureRect] = []
 var _material_pool:Array[TextureRect] = []
 
-@onready var positioner:Node2D = %positioner
-
 
 func _ready() -> void:
 	Signals.spawn_resource_floater.connect(_spawn_resource_floater)

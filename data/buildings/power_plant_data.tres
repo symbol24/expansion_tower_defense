@@ -9,6 +9,7 @@ description = "Increases available power by X."
 coords = Vector2i(15, 2)
 path = "res://scenes/buildings/power_plant.tscn"
 tick_building = true
+can_low_power = false
 money_cost = 2
 power_cost = 0
 material_cost = 2

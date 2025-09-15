@@ -9,6 +9,7 @@ description = ""
 coords = Vector2i(0, 0)
 path = "res://scenes/buildings/tower.tscn"
 tick_building = true
+can_low_power = false
 money_cost = 0
 power_cost = 0
 material_cost = 0

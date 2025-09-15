@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=2 format=3 uid="uid://dae22q8fcdeqv"]
+
+[ext_resource type="Script" uid="uid://38rjxnu8to56" path="res://code/enemies/enemy_data.gd" id="1_x1c8k"]
+
+[resource]
+script = ExtResource("1_x1c8k")
+id = &"debug_enemy"
+path = "res://scenes/enemies/debug_enemy.tscn"
+starting_hp = 1
+starting_damage = 1
+starting_speed = 10.0
+metadata/_custom_type_script = "uid://38rjxnu8to56"

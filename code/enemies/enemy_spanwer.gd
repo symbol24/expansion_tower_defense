@@ -1,0 +1,74 @@
+class_name EnemySpawner extends Node2D
+
+
+@export var enemy_datas:Array[EnemyData] = []
+@export var spawn_amount_range := Vector2i(1, 5)
+@export var spawn_time_range := Vector2(0.66, 3)
+@export var difficulty_brackets := [0, 60, 120, 180, 240]
+
+var _pool:Array[Enemy] = []
+var _delay := 0.0
+var _timer := 0.0:
+	set(value):
+		_timer = value
+		if _timer >= _delay:
+			_spawn_enemies()
+			_timer = 0.0
+
+
+func _ready() -> void:
+	Signals.return_enemy_to_pool.connect(_return_enemy_to_pool)
+	Signals.start_match.connect(_spawn_enemies)
+
+
+func _spawn_enemies() -> void:
+	var i := randi_range(spawn_amount_range.x, spawn_amount_range.y)
+	for j in i:
+		_spawn_one_enemy(_get_enemy_data_to_spawn())
+	
+
+func _spawn_one_enemy(data:EnemyData) -> void:
+	var new_enemy:Enemy = _get_one_enemy(data)
+	add_child(new_enemy)
+	new_enemy.setup_enemy(data)
+	new_enemy.name = data.id + &"_0"
+	var x := 0.0 if randf() > 0.5 else Data.SPAWN_OUTLINE.x
+	var y := 0.0 if randf() > 0.5 else Data.SPAWN_OUTLINE.y
+	new_enemy.global_position = Vector2(x, y)
+
+
+func _get_one_enemy(data:EnemyData) -> Enemy:
+	var i := 0
+	var found := false
+	for each in _pool:
+		if each.data.id == data.id:
+			found = true
+			break
+		i += 1
+	
+	if found:
+		return _pool.pop_at(i)
+	
+	var new_enemy:Enemy = load(data.path).instantiate()
+	return new_enemy
+
+
+func _return_enemy_to_pool(enemy:Enemy) -> void:
+	remove_child(enemy)
+	_pool.append(enemy)
+
+
+func _get_enemy_data_to_spawn() -> EnemyData:
+	var i := 0
+	var time := Gm.get_current_match_time()
+	for upper in difficulty_brackets:
+		if time <= upper:
+			break
+		i += 1
+	
+	if i > enemy_datas.size()-1:
+		i = enemy_datas.size()-1
+	
+	var choice := randi_range(0, i)
+
+	return enemy_datas[choice]

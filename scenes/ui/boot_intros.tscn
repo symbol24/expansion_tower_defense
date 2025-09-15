@@ -13,7 +13,7 @@ id = &"boot_intros"
 metadata/_custom_type_script = "uid://djv2srvbephrn"
 
 [node name="background" type="ColorRect" parent="."]
-custom_minimum_size = Vector2(1290, 730)
+custom_minimum_size = Vector2(1930, 1090)
 layout_mode = 0
 offset_left = -5.0
 offset_top = -5.0
@@ -33,10 +33,10 @@ texture = ExtResource("2_jhsfs")
 
 [node name="wild_jam" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 316.0
-offset_top = 113.0
-offset_right = 1396.0
-offset_bottom = 935.0
+offset_left = 636.0
+offset_top = 218.0
+offset_right = 1716.0
+offset_bottom = 1040.0
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("3_6mmkb")
 

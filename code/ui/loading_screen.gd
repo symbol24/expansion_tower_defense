@@ -1,7 +1,7 @@
 class_name LoadingScreen extends Control
 
 
-const ROTATION_MULT := 0.5
+const ROTATION_MULT := 10
 
 
 @onready var logo: TextureRect = %logo

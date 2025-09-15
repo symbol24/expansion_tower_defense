@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://04dklxbue446" path="res://code/ui/debug_play_button.gd" id="2_fe2o3"]
 
 [node name="MainMenu" type="Control"]
+custom_minimum_size = Vector2(1920, 1080)
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_sl1te")
@@ -11,7 +12,7 @@ id = &"main_menu"
 metadata/_custom_type_script = "uid://djv2srvbephrn"
 
 [node name="title" type="Label" parent="."]
-custom_minimum_size = Vector2(1280, 64)
+custom_minimum_size = Vector2(1920, 64)
 layout_mode = 0
 offset_top = 162.0
 offset_right = 1280.0
@@ -24,9 +25,9 @@ vertical_alignment = 1
 [node name="Button" type="Button" parent="."]
 custom_minimum_size = Vector2(256, 84)
 layout_mode = 0
-offset_left = 512.0
+offset_left = 832.0
 offset_top = 360.0
-offset_right = 768.0
+offset_right = 1088.0
 offset_bottom = 444.0
 theme_override_font_sizes/font_size = 72
 text = "PLAY"

@@ -6,6 +6,7 @@ class_name BuildingData extends Resource
 @export var coords:Vector2i
 @export var path:String
 @export var tick_building := false
+@export var can_low_power := true
 
 @export_category("Costs")
 @export var money_cost := 1

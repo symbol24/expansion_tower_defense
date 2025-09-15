@@ -1,15 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://b4lykgqk23svg"]
+[gd_scene load_steps=5 format=3 uid="uid://b4lykgqk23svg"]
 
 [ext_resource type="Script" uid="uid://rymimab5582x" path="res://code/buildings/tower.gd" id="1_3uqjm"]
 [ext_resource type="TileSet" uid="uid://dd61axkqlofl7" path="res://data/tileset/level_tileset.tres" id="1_pb3th"]
+[ext_resource type="Texture2D" uid="uid://n4wxf07sod4d" path="res://textures/16x16_power.png" id="3_atuhl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pb3th"]
 size = Vector2(64, 63)
 
-[node name="tower" type="Area2D"]
+[node name="tower" type="Area2D" groups=["tower"]]
 script = ExtResource("1_3uqjm")
-power_usage = 0
-power_production = 10
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(-32, -32)
@@ -42,3 +41,14 @@ offset_left = -32.0
 offset_top = -32.0
 offset_right = 32.0
 offset_bottom = 32.0
+
+[node name="power_off" type="TextureRect" parent="."]
+unique_name_in_owner = true
+visible = false
+modulate = Color(1, 0.247059, 0.717647, 1)
+custom_minimum_size = Vector2(32, 32)
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+texture = ExtResource("3_atuhl")

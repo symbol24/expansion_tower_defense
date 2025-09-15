@@ -20,9 +20,18 @@ const FLOATER_COIN_PATH := "res://scenes/ui/floater_coin.tscn"
 const FLOATER_MATERIALS_PATH := "res://scenes/ui/floater_material.tscn"
 
 # BUILDINGS
-const OFFSET := Vector2(BuildMenuManager.CELL_SIZE/2, BuildMenuManager.CELL_SIZE/2)
+const OFFSET := Vector2(CELL_SIZE/2, CELL_SIZE/2)
 const TOWER_DATA := preload("res://data/buildings/tower_data.tres")
 
+# LEVEL AND GRIP
+const CELL_SIZE := 64
+const MAP_SIZE := Vector2i(1920, 1080)
+const SCREEN_START := MAP_SIZE/2
+
+# ENEMIES
+const SPAWN_OUTLINE := Vector2(1920, 1080)
+const FRICTION := 700.0
+const ACCELERATION := 500.0
 
 # UI VARS
 var build_area_panel:Panel:

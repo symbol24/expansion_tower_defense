@@ -2,8 +2,8 @@ extends Node
 
 
 var player_data:PlayerData
-var timers_active := false
-var active_level_timer := 0.0
+var _timers_active := false
+var _active_level_timer := 0.0
 
 
 func _ready() -> void:
@@ -18,13 +18,18 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
-	if timers_active:
-		active_level_timer += delta
+	if _timers_active:
+		_active_level_timer += delta
+
+
+func get_current_match_time() -> float:
+	return _active_level_timer
 
 
 func _start_level() -> void:
-	timers_active = true
+	_timers_active = true
 	Signals.updated_resources.emit(player_data.money, player_data.materials)
+	Signals.start_match.emit()
 
 
 func _build_request(building_data:BuildingData) -> void:

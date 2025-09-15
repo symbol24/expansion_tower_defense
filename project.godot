@@ -30,8 +30,10 @@ gdscript/warnings/unused_signal=0
 
 [display]
 
-window/size/viewport_width=1280
-window/size/viewport_height=720
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/window_width_override=1280
+window/size/window_height_override=720
 window/stretch/mode="canvas_items"
 
 [file_customization]
@@ -42,6 +44,10 @@ folder_colors={
 "res://scenes/": "red",
 "res://textures/": "teal"
 }
+
+[global_group]
+
+tower=""
 
 [gui]
 
@@ -59,6 +65,13 @@ back={
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":2,"canceled":false,"pressed":false,"double_click":false,"script":null)
 ]
 }
+
+[layer_names]
+
+2d_physics/layer_1="buildings"
+2d_physics/layer_2="enemies"
+2d_physics/layer_3="player projectiles"
+2d_physics/layer_4="enemy projectiles"
 
 [rendering]
 

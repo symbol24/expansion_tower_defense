@@ -43,9 +43,23 @@ func _spawn_one_enemy(data:EnemyData) -> void:
 	add_child(new_enemy)
 	new_enemy.setup_enemy(data)
 	new_enemy.name = data.id + &"_0"
-	var x := 0.0 if randf() > 0.5 else Data.SPAWN_OUTLINE.x
-	var y := 0.0 if randf() > 0.5 else Data.SPAWN_OUTLINE.y
-	new_enemy.global_position = Vector2(x, y)
+	new_enemy.global_position = _get_spawn_point()
+
+
+func _get_spawn_point() -> Vector2:
+	var where:String = ["top", "bottom", "left", "right"].pick_random()
+	var result:Vector2
+	match where:
+		"top":
+			result = Vector2(randf_range(0.0, Data.SPAWN_OUTLINE.x), 0.0)
+		"bottom":
+			result = Vector2(randf_range(0.0, Data.SPAWN_OUTLINE.x), Data.SPAWN_OUTLINE.y)
+		"left":
+			result = Vector2(0.0, randf_range(0.0, Data.SPAWN_OUTLINE.y))
+		_:
+			result = Vector2(Data.SPAWN_OUTLINE.x, randf_range(0.0, Data.SPAWN_OUTLINE.y))
+
+	return result
 
 
 func _get_one_enemy(data:EnemyData) -> Enemy:

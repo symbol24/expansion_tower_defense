@@ -1,9 +1,12 @@
-[gd_resource type="Resource" script_class="BuildingData" load_steps=2 format=3 uid="uid://dn8sh4gxrrxkv"]
+[gd_resource type="Resource" script_class="AttackBuildingData" load_steps=2 format=3 uid="uid://dn8sh4gxrrxkv"]
 
-[ext_resource type="Script" uid="uid://dl5j2rxdbtx5a" path="res://code/buildings/building_data.gd" id="1_67td2"]
+[ext_resource type="Script" uid="uid://bnoc7f8lxw2d7" path="res://code/buildings/attack_building_data.gd" id="1_67td2"]
 
 [resource]
 script = ExtResource("1_67td2")
+attack_range = 300.0
+attack_delay = 4.0
+is_projectile = false
 id = &"tesla_coil"
 description = "Fires at enemies in a radius."
 coords = Vector2i(14, 0)
@@ -11,8 +14,5 @@ path = "res://scenes/buildings/tesla_coil.tscn"
 money_cost = 2
 power_cost = 3
 material_cost = 2
-money_production = 0
-power_production = 0
-material_production = 0
-starting_hp = 100
+starting_hp = 10
 metadata/_custom_type_script = "uid://dl5j2rxdbtx5a"

@@ -30,6 +30,7 @@ func _ready() -> void:
 	_power_off_modulate_color = power_off_icon.modulate
 	power_off_icon.modulate = Color.TRANSPARENT
 	_tick_time = Data.TICK_TIME
+	toggle_hp_bar(false)
 
 
 func _process(delta: float) -> void:
@@ -54,6 +55,14 @@ func toggle_hp_bar(value:bool) -> void:
 func update_hp(value:int) -> void:
 	data.update_hp(value)
 	hp_bar.value = data.current_hp/data.max_hp
+	_timer_display_hp()
+
+
+func _timer_display_hp() -> void:
+	if not hp_bar.visible:
+		toggle_hp_bar(true)
+		await get_tree().create_timer(3.0).timeout
+		toggle_hp_bar(false)
 
 
 func _area_entered(area:Area2D) -> void:

@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://bf8v5et1htk7p"]
+
+[node name="TeslaCoilLine" type="Line2D"]
+points = PackedVector2Array(0, 0, 50, 15, 100, -10, 150, 0)

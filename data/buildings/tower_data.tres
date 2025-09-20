@@ -5,6 +5,7 @@
 [resource]
 script = ExtResource("1_teool")
 attack_range = 500.0
+attack_delay = 3.0
 proj_speed = 200.0
 proj_path = "res://scenes/buildings/projectiles/tower_projectile.tscn"
 id = &"tower"

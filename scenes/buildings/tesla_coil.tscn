@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://brtx1r221rygk"]
+[gd_scene load_steps=6 format=3 uid="uid://brtx1r221rygk"]
 
 [ext_resource type="Script" uid="uid://dvx0rw13l88cm" path="res://code/buildings/tesla_coil.gd" id="1_fg107"]
 [ext_resource type="TileSet" uid="uid://dd61axkqlofl7" path="res://data/tileset/level_tileset.tres" id="2_fg107"]
@@ -7,7 +7,10 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ty1iy"]
 size = Vector2(64, 64)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_a1v3g"]
+
 [node name="TeslaCoil" type="Area2D"]
+collision_mask = 10
 script = ExtResource("1_fg107")
 metadata/_custom_type_script = "uid://ckg6lsrqg0ws5"
 
@@ -51,3 +54,23 @@ offset_top = -16.0
 offset_right = 16.0
 offset_bottom = 16.0
 texture = ExtResource("3_a1v3g")
+
+[node name="line_point" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0, -12)
+
+[node name="attack_line" type="Line2D" parent="line_point"]
+unique_name_in_owner = true
+visible = false
+points = PackedVector2Array(0, 0, 200, 0)
+width = 5.0
+
+[node name="attack_area" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 2
+
+[node name="attack_area_collider" type="CollisionShape2D" parent="attack_area"]
+unique_name_in_owner = true
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_a1v3g")

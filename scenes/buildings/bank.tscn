@@ -8,6 +8,7 @@
 size = Vector2(64, 64)
 
 [node name="Bank" type="Area2D"]
+collision_mask = 10
 script = ExtResource("1_6xf50")
 metadata/_custom_type_script = "uid://ckg6lsrqg0ws5"
 

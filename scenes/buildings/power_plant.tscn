@@ -8,6 +8,7 @@
 size = Vector2(64, 64)
 
 [node name="PowerPlant" type="Area2D"]
+collision_mask = 10
 script = ExtResource("1_afyay")
 metadata/_custom_type_script = "uid://ckg6lsrqg0ws5"
 

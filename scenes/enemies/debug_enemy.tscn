@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cb3o34bo7hq7m"]
+[gd_scene load_steps=8 format=3 uid="uid://cb3o34bo7hq7m"]
 
 [ext_resource type="Script" uid="uid://75b800ltepwo" path="res://code/enemies/enemy.gd" id="1_0s3e4"]
 [ext_resource type="TileSet" uid="uid://dd61axkqlofl7" path="res://data/tileset/level_tileset.tres" id="2_18njy"]
 [ext_resource type="Script" uid="uid://bxpjojkdp3mxv" path="res://code/utilities/hit_box.gd" id="3_7lf1k"]
+[ext_resource type="Script" uid="uid://bgg7xfr2ytnod" path="res://code/utilities/hurt_box.gd" id="4_tirea"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7lf1k"]
 radius = 6.0
@@ -11,7 +12,12 @@ height = 18.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_18njy"]
 radius = 17.0294
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_njg04"]
+radius = 23.021729
+
 [node name="DebugEnemy" type="CharacterBody2D"]
+collision_layer = 0
+collision_mask = 0
 script = ExtResource("1_0s3e4")
 metadata/_custom_type_script = "uid://75b800ltepwo"
 
@@ -29,3 +35,13 @@ script = ExtResource("3_7lf1k")
 
 [node name="hit_collider" type="CollisionShape2D" parent="hit_box"]
 shape = SubResource("CircleShape2D_18njy")
+
+[node name="HurtBox" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 4
+script = ExtResource("4_tirea")
+metadata/_custom_type_script = "uid://bgg7xfr2ytnod"
+
+[node name="hurt_collider" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2(2, 2)
+shape = SubResource("CircleShape2D_njg04")

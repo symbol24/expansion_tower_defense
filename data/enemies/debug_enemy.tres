@@ -6,7 +6,5 @@
 script = ExtResource("1_x1c8k")
 id = &"debug_enemy"
 path = "res://scenes/enemies/debug_enemy.tscn"
-starting_hp = 1
-starting_damage = 1
-starting_speed = 10.0
+starting_speed = 100.0
 metadata/_custom_type_script = "uid://38rjxnu8to56"

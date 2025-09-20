@@ -7,6 +7,7 @@ class_name EnemySpawner extends Node2D
 @export var difficulty_brackets := [0, 60, 120, 180, 240]
 
 var _pool:Array[Enemy] = []
+var _active := false
 var _delay := 0.0
 var _timer := 0.0:
 	set(value):
@@ -18,13 +19,23 @@ var _timer := 0.0:
 
 func _ready() -> void:
 	Signals.return_enemy_to_pool.connect(_return_enemy_to_pool)
-	Signals.start_match.connect(_spawn_enemies)
+	Signals.start_match.connect(_start_spawning)
+
+
+func _process(delta: float) -> void:
+	if _active: _timer += delta
+
+
+func _start_spawning() -> void:
+	_spawn_enemies()
+	_active = true
 
 
 func _spawn_enemies() -> void:
 	var i := randi_range(spawn_amount_range.x, spawn_amount_range.y)
 	for j in i:
 		_spawn_one_enemy(_get_enemy_data_to_spawn())
+	_delay = randf_range(spawn_time_range.x, spawn_time_range.y)
 	
 
 func _spawn_one_enemy(data:EnemyData) -> void:
@@ -54,8 +65,9 @@ func _get_one_enemy(data:EnemyData) -> Enemy:
 
 
 func _return_enemy_to_pool(enemy:Enemy) -> void:
-	remove_child(enemy)
-	_pool.append(enemy)
+	#remove_child(enemy)
+	#_pool.append(enemy)
+	enemy.queue_free()
 
 
 func _get_enemy_data_to_spawn() -> EnemyData:

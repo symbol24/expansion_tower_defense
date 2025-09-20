@@ -26,3 +26,9 @@ func setup_data() -> void:
 	speed = starting_speed + ((level-1) * 0.1 * starting_hp)
 	damage = starting_damage + ((level-1) * 0.5 * starting_hp)
 	state = MOVING
+
+
+func update_hp(value:int) -> void:
+	current_hp = clampi(current_hp + value, 0, max_hp)
+	if current_hp <= 0:
+		state = DEAD

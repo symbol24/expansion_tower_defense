@@ -1,13 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://b4lykgqk23svg"]
+[gd_scene load_steps=7 format=3 uid="uid://b4lykgqk23svg"]
 
 [ext_resource type="Script" uid="uid://rymimab5582x" path="res://code/buildings/tower.gd" id="1_3uqjm"]
 [ext_resource type="TileSet" uid="uid://dd61axkqlofl7" path="res://data/tileset/level_tileset.tres" id="1_pb3th"]
 [ext_resource type="Texture2D" uid="uid://n4wxf07sod4d" path="res://textures/16x16_power.png" id="3_atuhl"]
+[ext_resource type="Script" uid="uid://m4vax7p13teq" path="res://code/effects/effect_manager.gd" id="4_6eta8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pb3th"]
 size = Vector2(64, 63)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_6eta8"]
+
 [node name="tower" type="Area2D" groups=["tower"]]
+collision_mask = 2
 script = ExtResource("1_3uqjm")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -52,3 +56,17 @@ offset_top = -16.0
 offset_right = 16.0
 offset_bottom = 16.0
 texture = ExtResource("3_atuhl")
+
+[node name="EffectManager" type="Node" parent="."]
+script = ExtResource("4_6eta8")
+metadata/_custom_type_script = "uid://m4vax7p13teq"
+
+[node name="attack_area" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 2
+
+[node name="attack_area_collider" type="CollisionShape2D" parent="attack_area"]
+unique_name_in_owner = true
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_6eta8")

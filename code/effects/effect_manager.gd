@@ -19,14 +19,14 @@ func _process(delta: float) -> void:
 
 
 func _add_effect(effect:EffectData) -> void:
-	if effect.get_target() != _owner: return
+	if effect.get_target_name() != _owner.name: return
 	var new_effect:EffectData = effect.duplicate(true)
-	new_effect.apply_effect()
+	new_effect.apply_effect(_owner)
 	_active_effects.append(new_effect)
 
 
 func _remove_effect(effect:EffectData) -> void:
-	if effect.get_target() != _owner: return
+	if effect.get_target_name() != _owner.name: return
 	var i := 0
 	var found := false
 	for each in _active_effects:

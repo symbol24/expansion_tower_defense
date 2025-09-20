@@ -20,3 +20,5 @@ script = ExtResource("3_xb4v1")
 [node name="enemy_spanwer" type="Node2D" parent="."]
 script = ExtResource("4_xb4v1")
 enemy_datas = Array[ExtResource("5_d4w6o")]([ExtResource("6_mbbpy")])
+spawn_amount_range = Vector2i(4, 4)
+spawn_time_range = Vector2(1, 5)

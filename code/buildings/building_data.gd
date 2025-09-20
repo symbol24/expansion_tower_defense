@@ -47,3 +47,4 @@ func get_money_production() -> int:
 func get_materials_production() -> int:
 	if not is_active: return 0
 	return material_production
+

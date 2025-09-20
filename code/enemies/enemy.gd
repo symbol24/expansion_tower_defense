@@ -24,7 +24,14 @@ func trigger_death() -> void:
 	Signals.return_enemy_to_pool.emit(self)
 
 
+func update_hp(value:int) -> void:
+	data.update_hp(-value)
+	if data.state == EnemyData.DEAD:
+		_death()
+
+
 func _move(delta:float) -> void:
+	if _target == null: return
 	if data.state == EnemyData.MOVING:
 		var direction := global_position.direction_to(_target.global_position)
 		var x := move_toward(velocity.x, direction.x * data.speed, delta * Data.ACCELERATION)
@@ -32,3 +39,7 @@ func _move(delta:float) -> void:
 		velocity = Vector2(x, y)
 	else:
 		if velocity != Vector2.ZERO: velocity = Vector2.ZERO
+
+
+func _death() -> void:
+	Signals.return_enemy_to_pool.emit(self)

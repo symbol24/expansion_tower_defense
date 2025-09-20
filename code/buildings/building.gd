@@ -51,9 +51,14 @@ func toggle_hp_bar(value:bool) -> void:
 	else: hp_bar.hide()	
 
 
+func update_hp(value:int) -> void:
+	data.update_hp(value)
+	hp_bar.value = data.current_hp/data.max_hp
+
+
 func _area_entered(area:Area2D) -> void:
 	if area.has_method("get_damage"):
-		Signals.add_effect.emit(area.get_damage(self))
+		update_hp(-area.get_damage())
 
 
 func _mouse_enter() -> void:

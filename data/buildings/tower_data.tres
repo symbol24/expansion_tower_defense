@@ -1,20 +1,19 @@
-[gd_resource type="Resource" script_class="BuildingData" load_steps=2 format=3 uid="uid://cupbcxht6gtgm"]
+[gd_resource type="Resource" script_class="AttackBuildingData" load_steps=2 format=3 uid="uid://cupbcxht6gtgm"]
 
-[ext_resource type="Script" uid="uid://dl5j2rxdbtx5a" path="res://code/buildings/building_data.gd" id="1_teool"]
+[ext_resource type="Script" uid="uid://bnoc7f8lxw2d7" path="res://code/buildings/attack_building_data.gd" id="1_teool"]
 
 [resource]
 script = ExtResource("1_teool")
+attack_range = 500.0
+proj_speed = 200.0
+proj_path = "res://scenes/buildings/projectiles/tower_projectile.tscn"
 id = &"tower"
-description = ""
-coords = Vector2i(0, 0)
 path = "res://scenes/buildings/tower.tscn"
 tick_building = true
 can_low_power = false
 money_cost = 0
-power_cost = 0
 material_cost = 0
 money_production = 1
 power_production = 5
 material_production = 1
-starting_hp = 100
 metadata/_custom_type_script = "uid://dl5j2rxdbtx5a"

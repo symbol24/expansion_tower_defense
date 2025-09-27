@@ -1,0 +1,122 @@
+{
+	"categories": [
+		{
+			"uuid": "a6444aff-ce31-41ad-85c9-a1c32fc914f0",
+			"title": "Task",
+			"color": "70bafa"
+		},
+		{
+			"uuid": "2de994b9-12e3-4cbc-8232-90f7f457a0c7",
+			"title": "Backlog",
+			"color": "079d22"
+		},
+		{
+			"uuid": "3d143222-3d04-4d1a-8d1a-5543a42b1dca",
+			"title": "Bug",
+			"color": "dc098a"
+		},
+		{
+			"uuid": "66e9b968-896c-4e14-b405-d9eeda2e4d76",
+			"title": "Design",
+			"color": "d89625"
+		}
+	],
+	"stages": [
+		{
+			"uuid": "97af5918-555d-4fe8-8afb-1b8f3bc25212",
+			"title": "Todo",
+			"tasks": [
+				"57dc5033-8b01-4520-89b8-46136b6b642e",
+				"81481eb1-b033-4206-becf-c26a33003ae1",
+				"4cf89e4c-7fa8-4394-8a35-a5a28fec1f92",
+				"20ccdc09-5aa2-4eb1-8f2a-5abbcc91e59c",
+				"6a7831fa-30e1-43cc-91d3-73f31e8ca76c",
+				"8bd3e57b-4688-4729-8d91-4b320039aaf3",
+				"7a40a31b-d647-4e98-9005-36345b41bd60"
+			]
+		},
+		{
+			"uuid": "29dc5a96-8531-4164-ae87-9bdafe8524ec",
+			"title": "Doing",
+			"tasks": [
+				"a2bea21f-f17d-48b0-ba4b-52f40fe4b0a1"
+			]
+		},
+		{
+			"uuid": "530cd6e9-8912-45fa-8886-3930828f32c4",
+			"title": "Done",
+			"tasks": []
+		}
+	],
+	"tasks": [
+		{
+			"uuid": "57dc5033-8b01-4520-89b8-46136b6b642e",
+			"title": "Add audio manager",
+			"description": "",
+			"category": "2de994b9-12e3-4cbc-8232-90f7f457a0c7",
+			"steps": []
+		},
+		{
+			"uuid": "81481eb1-b033-4206-becf-c26a33003ae1",
+			"title": "add audio triggers",
+			"description": "",
+			"category": "2de994b9-12e3-4cbc-8232-90f7f457a0c7",
+			"steps": []
+		},
+		{
+			"uuid": "4cf89e4c-7fa8-4394-8a35-a5a28fec1f92",
+			"title": "Decide what playstyle we want",
+			"description": "- placement with resources from kills?\n- roguelite round progression?",
+			"category": "66e9b968-896c-4e14-b405-d9eeda2e4d76",
+			"steps": []
+		},
+		{
+			"uuid": "a2bea21f-f17d-48b0-ba4b-52f40fe4b0a1",
+			"title": "Add rogue lite version",
+			"description": "- no materials needed\n- no power means 50% efficiency, not totally off\n- rounds\n- shop between rounds to buy new buildings\n- place buildings by drag and dropping (still just around other buildings)",
+			"category": "a6444aff-ce31-41ad-85c9-a1c32fc914f0",
+			"steps": []
+		},
+		{
+			"uuid": "20ccdc09-5aa2-4eb1-8f2a-5abbcc91e59c",
+			"title": "Refactor map grid",
+			"description": "- grid must be fixed per level\n- must have not buildable areas",
+			"category": "a6444aff-ce31-41ad-85c9-a1c32fc914f0",
+			"steps": []
+		},
+		{
+			"uuid": "6a7831fa-30e1-43cc-91d3-73f31e8ca76c",
+			"title": "make a level editor for grid",
+			"description": "- could use the tilemaplayer to know type of cell (buildable / not buldable)",
+			"category": "2de994b9-12e3-4cbc-8232-90f7f457a0c7",
+			"steps": []
+		},
+		{
+			"uuid": "8bd3e57b-4688-4729-8d91-4b320039aaf3",
+			"title": "add camera manipulation",
+			"description": "- move\n- zoom",
+			"category": "2de994b9-12e3-4cbc-8232-90f7f457a0c7",
+			"steps": []
+		},
+		{
+			"uuid": "7a40a31b-d647-4e98-9005-36345b41bd60",
+			"title": "Decide on look and theme",
+			"description": "- GB?\n- Retro futuristic?\n- Dinos?\n- of RL how does the fail/reset work?",
+			"category": "2de994b9-12e3-4cbc-8232-90f7f457a0c7",
+			"steps": []
+		}
+	],
+	"layout": {
+		"columns": [
+			[
+				"97af5918-555d-4fe8-8afb-1b8f3bc25212"
+			],
+			[
+				"29dc5a96-8531-4164-ae87-9bdafe8524ec"
+			],
+			[
+				"530cd6e9-8912-45fa-8886-3930828f32c4"
+			]
+		]
+	}
+}

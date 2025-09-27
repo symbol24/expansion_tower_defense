@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://b162esw5gph7y"]
+[gd_scene load_steps=6 format=3 uid="uid://b162esw5gph7y"]
 
 [ext_resource type="Script" uid="uid://cgjqvsceug5km" path="res://code/ui/loading_screen.gd" id="1_q4fso"]
-[ext_resource type="Texture2D" uid="uid://2uyfeghxmw3p" path="res://icon.svg" id="1_rqdcv"]
+[ext_resource type="Texture2D" uid="uid://ckib3n2gsdvoo" path="res://textures/Border/panel-border-013.png" id="2_q4fso"]
+[ext_resource type="Texture2D" uid="uid://bshsf063pptly" path="res://textures/Divider Fade/divider-fade-005.png" id="3_5fj0j"]
+[ext_resource type="TileSet" uid="uid://dd61axkqlofl7" path="res://data/tileset/level_tileset.tres" id="4_s41fs"]
+[ext_resource type="PackedScene" uid="uid://dlh7ui37qv4ke" path="res://scenes/ui/panel_area_selection.tscn" id="5_y06jl"]
 
 [node name="LoadingScreen" type="Control"]
 top_level = true
@@ -22,12 +25,88 @@ offset_right = 1285.0
 offset_bottom = 725.0
 color = Color(0.0745098, 0.0745098, 0.0745098, 1)
 
-[node name="logo" type="TextureRect" parent="."]
-unique_name_in_owner = true
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+custom_minimum_size = Vector2(1.536, 864)
 layout_mode = 0
-offset_left = 1728.0
-offset_top = 888.0
-offset_right = 1856.0
-offset_bottom = 1016.0
-pivot_offset = Vector2(64, 64)
-texture = ExtResource("1_rqdcv")
+offset_left = 192.0
+offset_top = 108.0
+offset_right = 1728.0
+offset_bottom = 972.0
+texture = ExtResource("2_q4fso")
+region_rect = Rect2(0, 0, 48, 48)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(384, 128)
+layout_mode = 0
+offset_left = 768.0
+offset_top = 791.0
+offset_right = 1152.0
+offset_bottom = 919.0
+theme_type_variation = &"Loading_Label"
+text = "LOADING"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 468.0
+offset_top = 836.0
+offset_right = 564.0
+offset_bottom = 854.0
+scale = Vector2(3, 3)
+texture = ExtResource("3_5fj0j")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 1153.0
+offset_top = 836.0
+offset_right = 1249.0
+offset_bottom = 854.0
+scale = Vector2(3, 3)
+texture = ExtResource("3_5fj0j")
+flip_h = true
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 264.0
+offset_top = 572.0
+offset_right = 1656.0
+offset_bottom = 623.0
+theme_type_variation = &"Loading_tip"
+text = "Mouse over a building to display the build positions."
+horizontal_alignment = 1
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray(0, 0, 14, 0, 5, 0, 0, 0, 14, 0, 1, 0, 0, 0)
+tile_set = ExtResource("4_s41fs")
+
+[node name="build_area_panel" parent="TileMapLayer" instance=ExtResource("5_y06jl")]
+offset_left = 830.0
+offset_top = 319.0
+offset_right = 894.0
+offset_bottom = 383.0
+
+[node name="build_area_panel2" parent="TileMapLayer" instance=ExtResource("5_y06jl")]
+offset_left = 962.0
+offset_top = 319.0
+offset_right = 1026.0
+offset_bottom = 383.0
+
+[node name="build_area_panel3" parent="TileMapLayer" instance=ExtResource("5_y06jl")]
+offset_left = 896.0
+offset_top = 253.0
+offset_right = 960.0
+offset_bottom = 317.0
+
+[node name="build_area_panel4" parent="TileMapLayer" instance=ExtResource("5_y06jl")]
+offset_left = 896.0
+offset_top = 387.0
+offset_right = 960.0
+offset_bottom = 451.0

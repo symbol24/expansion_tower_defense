@@ -1,6 +1,8 @@
-[gd_resource type="Theme" load_steps=9 format=3 uid="uid://b62vl07cjqys3"]
+[gd_resource type="Theme" load_steps=18 format=3 uid="uid://b62vl07cjqys3"]
 
+[ext_resource type="Texture2D" uid="uid://bv2ipisthc1ns" path="res://textures/Border/panel-border-025.png" id="1_uiit7"]
 [ext_resource type="FontFile" uid="uid://tekr0gmalfw5" path="res://data/m5x7.ttf" id="1_x3fhk"]
+[ext_resource type="Texture2D" uid="uid://bq3hqrm28tlsd" path="res://textures/Transparent center/panel-transparent-center-000.png" id="2_47hc6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vjq4v"]
 content_margin_left = 10.0
@@ -13,6 +15,61 @@ corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 anti_aliasing = false
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_47hc6"]
+texture = ExtResource("1_uiit7")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+modulate_color = Color(0, 0.50980395, 0.50980395, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yoa6b"]
+texture = ExtResource("1_uiit7")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+modulate_color = Color(0, 0.50980395, 0.50980395, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_uiit7"]
+load_path = "res://.godot/imported/panel-border-025.png-1baad52d6ea7d9024a147e40714c82c2.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e74n4"]
+texture = SubResource("CompressedTexture2D_uiit7")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+modulate_color = Color(1, 0.7411765, 0.85490197, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uiit7"]
+texture = ExtResource("1_uiit7")
+texture_margin_left = 20.317345
+texture_margin_top = 20.281422
+texture_margin_right = 20.0
+texture_margin_bottom = 20.324028
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vjq4v"]
+texture = ExtResource("2_47hc6")
+texture_margin_left = 12.503681
+texture_margin_top = 12.722496
+texture_margin_right = 12.655469
+texture_margin_bottom = 12.5505705
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+modulate_color = Color(1, 1, 1, 0.5254902)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8doc8"]
+bg_color = Color(0.07450981, 0.07450981, 0.07450981, 0.70980394)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oxuqd"]
 bg_color = Color(0.176471, 0.176471, 0.176471, 0.54902)
@@ -58,7 +115,7 @@ anti_aliasing = false
 
 [resource]
 default_font = ExtResource("1_x3fhk")
-default_font_size = 8
+default_font_size = 16
 BB_LABEL/base_type = &"Label"
 BB_LABEL/colors/font_outline_color = Color(0, 0, 0, 1)
 BB_LABEL/constants/outline_size = 3
@@ -79,8 +136,25 @@ BB_positive_label/constants/outline_size = 3
 BB_positive_label/font_sizes/font_size = 22
 BuildMenuTitle/base_type = &"Label"
 BuildMenuTitle/font_sizes/font_size = 32
+Button/colors/font_color = Color(0.9515795, 0.95157963, 0.9515794, 1)
+Button/colors/font_focus_color = Color(0, 0.50980395, 0.50980395, 1)
+Button/colors/font_hover_color = Color(0, 0.50980395, 0.50980395, 1)
+Button/colors/font_pressed_color = Color(1, 0.7411765, 0.85490197, 1)
+Button/font_sizes/font_size = 32
+Button/styles/disabled = null
+Button/styles/focus = SubResource("StyleBoxTexture_47hc6")
+Button/styles/hover = SubResource("StyleBoxTexture_yoa6b")
+Button/styles/hover_pressed = SubResource("StyleBoxTexture_e74n4")
+Button/styles/normal = SubResource("StyleBoxTexture_uiit7")
+Button/styles/pressed = SubResource("StyleBoxTexture_e74n4")
+Loading_Label/base_type = &"Label"
+Loading_Label/font_sizes/font_size = 128
+Loading_tip/base_type = &"Label"
+Loading_tip/font_sizes/font_size = 64
 MM_TITLE/base_type = &"Label"
-MM_TITLE/font_sizes/font_size = 72
+MM_TITLE/font_sizes/font_size = 124
+MM_Text/base_type = &"Label"
+MM_Text/font_sizes/font_size = 48
 RID_LOGO/base_type = &"Label"
 RID_LOGO/font_sizes/font_size = 64
 Res_Label_Negative/base_type = &"Label"
@@ -88,6 +162,14 @@ Res_Label_Negative/colors/font_color = Color(0.664639, 0, 0.201939, 1)
 Res_Label_Negative/font_sizes/font_size = 48
 Res_Labels/base_type = &"Label"
 Res_Labels/font_sizes/font_size = 48
+ResourcePanel/base_type = &"Panel"
+ResourcePanel/styles/panel = SubResource("StyleBoxTexture_vjq4v")
+ResultBackPanel/base_type = &"Panel"
+ResultBackPanel/styles/panel = SubResource("StyleBoxFlat_8doc8")
+ResultTextLabel/base_type = &"Label"
+ResultTextLabel/font_sizes/font_size = 64
+ResultTitleLabel/base_type = &"Label"
+ResultTitleLabel/font_sizes/font_size = 128
 building_hp_bar/base_type = &"ProgressBar"
 building_hp_bar/styles/background = SubResource("StyleBoxFlat_oxuqd")
 building_hp_bar/styles/fill = SubResource("StyleBoxFlat_x3fhk")

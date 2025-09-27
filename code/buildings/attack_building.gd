@@ -8,10 +8,10 @@ var _projectile:Projectile
 var _can_shoot := true
 var _targets:Array[Node2D] = []
 var _delay_active := false
-var _timer := 0.0:
+var _attack_timer := 0.0:
 	set(value):
-		_timer = value
-		if _timer >= data.attack_delay:
+		_attack_timer = value
+		if _attack_timer >= data.attack_delay:
 			_can_shoot_again()
 
 
@@ -22,7 +22,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	super(delta)
-	if not _can_shoot and _delay_active: _timer += delta
+	if not _can_shoot and _delay_active: _attack_timer += delta
 	if _can_shoot and not _delay_active and not _targets.is_empty(): _shoot_cycle()
 
 
@@ -56,7 +56,7 @@ func _shoot_one_bullet(target:Node2D) -> void:
 
 
 func _can_shoot_again() -> void:
-	_timer = 0.0
+	_attack_timer = 0.0
 	_delay_active = false
 	_can_shoot = true
 	_shoot_cycle()

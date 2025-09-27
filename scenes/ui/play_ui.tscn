@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://vt6qklri7tl"]
+[gd_scene load_steps=7 format=3 uid="uid://vt6qklri7tl"]
 
 [ext_resource type="Script" uid="uid://dxj8xo24lln61" path="res://code/ui/play_ui.gd" id="1_e8yxp"]
 [ext_resource type="Texture2D" uid="uid://3v2xp2pdyrrc" path="res://textures/16x16_coin.png" id="2_e8yxp"]
 [ext_resource type="Texture2D" uid="uid://bfwq11exl50s1" path="res://textures/16x16_material.png" id="3_55wvk"]
 [ext_resource type="Texture2D" uid="uid://n4wxf07sod4d" path="res://textures/16x16_power.png" id="4_j1cpi"]
 [ext_resource type="Script" uid="uid://cx82ekoylkqet" path="res://code/ui/resource_icon_floaters.gd" id="5_55wvk"]
+[ext_resource type="Texture2D" uid="uid://c8lirg4urrxgk" path="res://textures/16x16_timer.png" id="5_j1cpi"]
 
 [node name="PlayUi" type="Control"]
 custom_minimum_size = Vector2(1920, 1080)
@@ -15,66 +16,179 @@ script = ExtResource("1_e8yxp")
 id = &"play_ui"
 metadata/_custom_type_script = "uid://djv2srvbephrn"
 
-[node name="resource_panel" type="PanelContainer" parent="."]
+[node name="tick_panel" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+visible = false
 custom_minimum_size = Vector2(720, 64)
 layout_mode = 0
 offset_left = 600.0
 offset_top = 32.0
 offset_right = 1320.0
 offset_bottom = 96.0
+theme_type_variation = &"ResourcePanel"
+metadata/_edit_lock_ = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="resource_panel"]
+[node name="HBoxContainer" type="HBoxContainer" parent="tick_panel"]
 layout_mode = 2
 size_flags_horizontal = 4
 
-[node name="TextureRect" type="TextureRect" parent="resource_panel/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="tick_panel/HBoxContainer"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("2_e8yxp")
 
-[node name="coins" type="Label" parent="resource_panel/HBoxContainer"]
+[node name="tick_coins" type="Label" parent="tick_panel/HBoxContainer"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(160, 32)
+custom_minimum_size = Vector2(120, 24)
 layout_mode = 2
+size_flags_horizontal = 4
 size_flags_vertical = 1
 theme_type_variation = &"Res_Labels"
 text = "00"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureRect2" type="TextureRect" parent="resource_panel/HBoxContainer"]
+[node name="TextureRect2" type="TextureRect" parent="tick_panel/HBoxContainer"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("3_55wvk")
 
-[node name="materials" type="Label" parent="resource_panel/HBoxContainer"]
+[node name="tick_materials" type="Label" parent="tick_panel/HBoxContainer"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(160, 32)
+custom_minimum_size = Vector2(120, 24)
 layout_mode = 2
+size_flags_horizontal = 4
 size_flags_vertical = 1
 theme_type_variation = &"Res_Labels"
 text = "00"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureRect3" type="TextureRect" parent="resource_panel/HBoxContainer"]
+[node name="TextureRect3" type="TextureRect" parent="tick_panel/HBoxContainer"]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("4_j1cpi")
 
-[node name="power" type="Label" parent="resource_panel/HBoxContainer"]
+[node name="tick_power" type="Label" parent="tick_panel/HBoxContainer"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(160, 32)
+custom_minimum_size = Vector2(120, 24)
 layout_mode = 2
+size_flags_horizontal = 4
 size_flags_vertical = 1
 theme_type_variation = &"Res_Labels"
 text = "00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect4" type="TextureRect" parent="tick_panel/HBoxContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("5_j1cpi")
+
+[node name="tick_time" type="Label" parent="tick_panel/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme_type_variation = &"Res_Labels"
+text = "00:00:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="placement_panel" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(720, 64)
+layout_mode = 0
+offset_left = 600.0
+offset_top = 32.0
+offset_right = 1320.0
+offset_bottom = 96.0
+theme_type_variation = &"ResourcePanel"
+metadata/_edit_lock_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="placement_panel"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="TextureRect" type="TextureRect" parent="placement_panel/HBoxContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_e8yxp")
+
+[node name="placement_coins" type="Label" parent="placement_panel/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 24)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme_type_variation = &"Res_Labels"
+text = "00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="placement_panel/HBoxContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("3_55wvk")
+
+[node name="placement_materials" type="Label" parent="placement_panel/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 24)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme_type_variation = &"Res_Labels"
+text = "00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect3" type="TextureRect" parent="placement_panel/HBoxContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("4_j1cpi")
+
+[node name="placement_power" type="Label" parent="placement_panel/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 24)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme_type_variation = &"Res_Labels"
+text = "00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect4" type="TextureRect" parent="placement_panel/HBoxContainer"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("5_j1cpi")
+
+[node name="placement_time" type="Label" parent="placement_panel/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme_type_variation = &"Res_Labels"
+text = "00:00:00"
 horizontal_alignment = 1
 vertical_alignment = 1
 

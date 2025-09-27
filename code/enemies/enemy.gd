@@ -42,4 +42,5 @@ func _move(delta:float) -> void:
 
 
 func _death() -> void:
+	Signals.check_death_for_resources.emit(global_position)
 	Signals.return_enemy_to_pool.emit(self)

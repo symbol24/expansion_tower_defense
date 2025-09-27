@@ -12,7 +12,8 @@ collision_mask = 10
 script = ExtResource("1_28ys6")
 metadata/_custom_type_script = "uid://ckg6lsrqg0ws5"
 
-[node name="TileMapLayer" type="TileMapLayer" parent="."]
+[node name="normal" type="TileMapLayer" parent="."]
+unique_name_in_owner = true
 position = Vector2(-32, -32)
 tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 14, 0, 2, 0, 0, 0)
 tile_set = ExtResource("2_28ys6")

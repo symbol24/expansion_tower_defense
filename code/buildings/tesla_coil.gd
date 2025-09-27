@@ -11,6 +11,7 @@ var _target_point:Vector2
 
 @onready var line_point: Marker2D = %line_point
 @onready var attack_line: Line2D = %attack_line
+@onready var attack: TileMapLayer = %attack
 
 
 func setup_building(new_data:BuildingData) -> void:
@@ -22,6 +23,7 @@ func setup_building(new_data:BuildingData) -> void:
 
 
 func _shoot_one_bullet(target:Node2D) -> void:
+	attack_line.global_position = line_point.global_position
 	_display_line(target.global_position)
 	target.update_hp(data.damage)
 
@@ -36,12 +38,16 @@ func _create_line() -> void:
 	_update_points()
 	attack_line.points = _points
 	attack_line.set_visible(true)
+	normal.set_visible(false)
+	attack.set_visible(true)
 	_hide_line()
 
 
 func _hide_line() -> void:
 	await get_tree().create_timer(0.3).timeout
 	attack_line.set_visible(false)
+	normal.set_visible(true)
+	attack.set_visible(false)
 
 
 func _update_points() -> void:
@@ -55,4 +61,4 @@ func _update_points() -> void:
 		_points.append(new_point_rotated)
 		start_point = new_point
 		curr_line_len = start_point.length()
-	
+	_points.append(_final_point)

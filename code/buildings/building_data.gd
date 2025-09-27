@@ -1,6 +1,9 @@
 class_name BuildingData extends Resource
 
 
+enum Debug_Building_Type {TICK, PLACEMENT, ROGUELITE}
+
+
 @export var id := &""
 @export var description := ""
 @export var coords:Vector2i
@@ -17,6 +20,8 @@ class_name BuildingData extends Resource
 @export var money_production := 0
 @export var power_production := 0
 @export var material_production := 0
+@export var money_chance := 0.0
+@export var material_chance := 0.0
 
 @export_category("Life Stats")
 @export var starting_hp := 100
@@ -24,6 +29,9 @@ var current_level := 1
 var current_hp := 100.0
 var max_hp := 100.0
 var is_active := false
+
+@export_category("DEGUG")
+@export var building_type:Debug_Building_Type
 
 
 func setup_building_data() -> void:

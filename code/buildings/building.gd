@@ -5,13 +5,14 @@ const POWER_OFF_CYCLE := 1.0
 
 
 var data:BuildingData
+var grid_coords:Vector2
 var _tick_time := 0.0
-var timer := 0.0:
+var _timer := 0.0:
 	set(value):
-		timer = value
-		if timer >= _tick_time:
+		_timer = value
+		if _timer >= _tick_time:
 			_trigger_building()
-			timer = 0.0
+			_timer = 0.0
 var _power_off_cycling := false
 var _power_off_modulate_color:Color
 var _low_power := false
@@ -19,6 +20,7 @@ var _low_power := false
 @onready var mouse_over: Control = %mouse_over
 @onready var hp_bar: ProgressBar = %hp_bar
 @onready var power_off_icon:TextureRect = %power_off
+@onready var normal: TileMapLayer = %normal
 
 
 func _ready() -> void:
@@ -35,7 +37,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if data.is_active:
-		if data.tick_building: timer += delta
+		if data.tick_building: _timer += delta
 		if _low_power and not _power_off_cycling:
 			_play_power_off_cycle()
 
@@ -55,7 +57,12 @@ func toggle_hp_bar(value:bool) -> void:
 func update_hp(value:int) -> void:
 	data.update_hp(value)
 	hp_bar.value = data.current_hp/data.max_hp
-	_timer_display_hp()
+	if data.current_hp <= 0:
+		Signals.remove_building.emit(self)
+		if self is Tower:
+			Signals.end_match.emit(false)
+	else:
+		_timer_display_hp()
 
 
 func _timer_display_hp() -> void:
@@ -79,11 +86,12 @@ func _mouse_exit() -> void:
 
 
 func _trigger_building() -> void:
-	if data.money_production > 0:
-		Signals.spawn_resource_floater.emit("coin", Vector2(global_position.x + randf_range(-20, 0), global_position.y))
-	if data.material_production > 0:
-		Signals.spawn_resource_floater.emit("material", Vector2(global_position.x + randf_range(0, 20), global_position.y))
-	Signals.add_resources.emit(self)
+	if data.building_type == BuildingData.Debug_Building_Type.TICK:
+		if data.money_production > 0:
+			Signals.spawn_resource_floater.emit("coin", Vector2(global_position.x + randf_range(-20, 0), global_position.y))
+		if data.material_production > 0:
+			Signals.spawn_resource_floater.emit("material", Vector2(global_position.x + randf_range(0, 20), global_position.y))
+		Signals.add_resources.emit(self)
 
 
 func _power_level_to_low() -> void:

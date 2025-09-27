@@ -29,6 +29,7 @@ func _process(_delta: float) -> void:
 
 
 func _load_scene(id:StringName, disply_loading:bool, extra_time:bool) -> void:
+	print("Loading: ", id)
 	if not scenes_lo_load.has(id):
 		push_warning("'%s' is not in the list of scenes available to load!" % id)
 		return

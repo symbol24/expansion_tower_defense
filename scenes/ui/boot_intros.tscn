@@ -1,9 +1,227 @@
-[gd_scene load_steps=5 format=3 uid="uid://cw10lmfom02t0"]
+[gd_scene load_steps=10 format=3 uid="uid://cw10lmfom02t0"]
 
 [ext_resource type="Script" uid="uid://ba4gk7rebjy44" path="res://code/ui/boot_intros.gd" id="1_2l38a"]
 [ext_resource type="Texture2D" uid="uid://c5ayft3oiheqi" path="res://textures/godot file 2.svg" id="2_jhsfs"]
 [ext_resource type="Texture2D" uid="uid://bv1gpoddn2ide" path="res://textures/GWJ-Full-Logo-noBG.svg" id="3_6mmkb"]
 [ext_resource type="Texture2D" uid="uid://ddvj3wts1uoo2" path="res://textures/logo_back_mini.png" id="4_rfgpk"]
+
+[sub_resource type="Animation" id="Animation_rfgpk"]
+resource_name = "wild_jam"
+length = 3.0
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("wild_jam:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("wild_jam:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_gg555"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("wild_jam:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("wild_jam:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("godot_logo:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("godot_logo:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("rid_name:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("rid_logo:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("rid_name:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("rid_logo:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_um6b4"]
+resource_name = "godot"
+length = 3.0
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("godot_logo:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("godot_logo:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_41jef"]
+resource_name = "rid"
+length = 3.0
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("rid_name:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("rid_logo:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("rid_name:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("rid_logo:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_um6b4"]
+_data = {
+&"RESET": SubResource("Animation_gg555"),
+&"godot": SubResource("Animation_um6b4"),
+&"rid": SubResource("Animation_41jef"),
+&"wild_jam": SubResource("Animation_rfgpk")
+}
 
 [node name="BootIntros" type="Control"]
 layout_mode = 3
@@ -23,15 +241,17 @@ color = Color(0.0784314, 0.133333, 0.25098, 1)
 
 [node name="godot_logo" type="TextureRect" parent="."]
 visible = false
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 140.0
-offset_top = -140.0
-offset_right = 2140.0
-offset_bottom = 1860.0
+offset_left = 460.0
+offset_right = 2460.0
+offset_bottom = 2000.0
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_jhsfs")
 
 [node name="wild_jam" type="TextureRect" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 636.0
 offset_top = 218.0
@@ -42,22 +262,29 @@ texture = ExtResource("3_6mmkb")
 
 [node name="rid_logo" type="TextureRect" parent="."]
 visible = false
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 376.0
+offset_left = 560.0
 offset_top = 60.0
-offset_right = 1176.0
+offset_right = 1360.0
 offset_bottom = 860.0
-scale = Vector2(0.66, 0.66)
 texture = ExtResource("4_rfgpk")
 
 [node name="rid_name" type="Label" parent="."]
 visible = false
-custom_minimum_size = Vector2(1280, 64)
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(1920, 64)
 layout_mode = 0
-offset_top = 535.0
-offset_right = 1280.0
-offset_bottom = 599.0
+offset_top = 799.0
+offset_right = 1920.0
+offset_bottom = 863.0
 theme_type_variation = &"RID_LOGO"
 text = "ROBOTS IN DISGUISE"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="anim" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_um6b4")
+}

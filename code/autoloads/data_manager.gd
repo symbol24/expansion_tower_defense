@@ -3,6 +3,7 @@ extends Node
 
 # GAME CONST
 const TICK_TIME := 5.0
+const SURVIVE_TIME := 600.0
 
 # UI CONST
 const BB_POSITIVE_LABEL := &"BB_positive_label"
@@ -13,6 +14,7 @@ const LOADING_SCREEN_PATH := "res://scenes/ui/loading_screen.tscn"
 const PLAY_UI_PATH := "res://scenes/ui/play_ui.tscn"
 const MAIN_MENU_PATH := "res://scenes/ui/main_menu.tscn"
 const BOOT_INTROS_PATH := "res://scenes/ui/boot_intros.tscn"
+const RESULT_SCREEN_PATH := "res://scenes/ui/result_screen.tscn"
 const BUILD_AREA_PANEL_PATH := "res://scenes/ui/panel_area_selection.tscn"
 const BUILD_MENU_PATH := "res://scenes/ui/build_menu.tscn"
 const BUILD_BUTTON_PATH := "res://scenes/ui/building_button.tscn"
@@ -20,8 +22,9 @@ const FLOATER_COIN_PATH := "res://scenes/ui/floater_coin.tscn"
 const FLOATER_MATERIALS_PATH := "res://scenes/ui/floater_material.tscn"
 
 # BUILDINGS
-const OFFSET := Vector2(CELL_SIZE/2, CELL_SIZE/2)
+const OFFSET := Vector2(CELL_SIZE/2.0, CELL_SIZE/2.0)
 const TOWER_DATA := preload("res://data/buildings/tower_data.tres")
+const PLACEMENT_TOWER_DATA := preload("res://data/buildings/placement_tower_data.tres")
 
 # LEVEL AND GRIP
 const CELL_SIZE := 64

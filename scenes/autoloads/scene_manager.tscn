@@ -3,9 +3,12 @@
 [ext_resource type="Script" uid="uid://p3crppx1lh6d" path="res://code/autoloads/scene_manager.gd" id="1_aogjr"]
 
 [node name="SceneManager" type="Node"]
+process_mode = 3
 script = ExtResource("1_aogjr")
 scenes_lo_load = {
 &"level": "res://scenes/levels/level.tscn",
-&"main_menu": "res://scenes/levels/main_menu_node.tscn"
+&"main_menu": "res://scenes/levels/main_menu_node.tscn",
+&"placement_level": "uid://cpikdvyqe2oib",
+&"rogue_level": "uid://bjvvm5a8obmna"
 }
 extra_loading_time = 3.0

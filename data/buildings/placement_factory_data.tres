@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="BuildingData" load_steps=2 format=3 uid="uid://bkxnt7ujvpxro"]
+
+[ext_resource type="Script" uid="uid://dl5j2rxdbtx5a" path="res://code/buildings/building_data.gd" id="1_4kgte"]
+
+[resource]
+script = ExtResource("1_4kgte")
+id = &"P_Factory"
+description = "Placement Factory"
+coords = Vector2i(14, 2)
+path = "res://scenes/buildings/factory.tscn"
+money_cost = 3
+power_cost = 1
+material_cost = 2
+material_production = 1
+material_chance = 0.1
+starting_hp = 10
+building_type = 1
+metadata/_custom_type_script = "uid://dl5j2rxdbtx5a"

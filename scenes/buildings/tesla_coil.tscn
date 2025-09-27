@@ -17,9 +17,17 @@ metadata/_custom_type_script = "uid://ckg6lsrqg0ws5"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_ty1iy")
 
-[node name="TileMapLayer" type="TileMapLayer" parent="."]
+[node name="normal" type="TileMapLayer" parent="."]
+unique_name_in_owner = true
 position = Vector2(-32, -32)
 tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 15, 0, 0, 0, 0, 0)
+tile_set = ExtResource("2_fg107")
+
+[node name="attack" type="TileMapLayer" parent="."]
+unique_name_in_owner = true
+visible = false
+position = Vector2(-32, -32)
+tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 14, 0, 0, 0, 0, 0)
 tile_set = ExtResource("2_fg107")
 
 [node name="hp_bar" type="ProgressBar" parent="."]
@@ -62,6 +70,8 @@ position = Vector2(0, -12)
 [node name="attack_line" type="Line2D" parent="line_point"]
 unique_name_in_owner = true
 visible = false
+top_level = true
+position = Vector2(0, -12)
 points = PackedVector2Array(0, 0, 200, 0)
 width = 5.0
 

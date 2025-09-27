@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="AttackBuildingData" load_steps=2 format=3 uid="uid://cppwrcd5wfx5a"]
+
+[ext_resource type="Script" uid="uid://bnoc7f8lxw2d7" path="res://code/buildings/attack_building_data.gd" id="1_efm2p"]
+
+[resource]
+script = ExtResource("1_efm2p")
+attack_range = 500.0
+attack_delay = 3.0
+proj_speed = 200.0
+proj_path = "res://scenes/buildings/projectiles/tower_projectile.tscn"
+id = &"P_tower"
+path = "res://scenes/buildings/tower.tscn"
+can_low_power = false
+money_cost = 0
+material_cost = 0
+money_production = 1
+power_production = 5
+material_production = 1
+money_chance = 0.25
+material_chance = 0.25
+building_type = 1
+metadata/_custom_type_script = "uid://bnoc7f8lxw2d7"

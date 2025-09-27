@@ -8,6 +8,7 @@
 [ext_resource type="Resource" uid="uid://dae22q8fcdeqv" path="res://data/enemies/debug_enemy.tres" id="6_mbbpy"]
 
 [node name="Level" type="Node2D"]
+process_mode = 1
 script = ExtResource("1_b2cq8")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]

@@ -23,18 +23,20 @@ func _ready() -> void:
 	Signals.ui_area_exited.connect(_ui_area_exited)
 	Signals.close_build_menus.connect(_close_build_menus)
 	Signals.building_added.connect(_add_building)
+	Signals.remove_building.connect(_remove_building)
 	_setup_grid()
 
 
 func _display_build_menu(build_position:Vector2 = Vector2(640, 360)) -> void:
-	if _build_menu == null:
-		_build_menu = Data.build_menu.duplicate()
-		add_child(_build_menu)
-	
-	_build_menu.global_position = Vector2(build_position.x + 32, build_position.y)
-	_build_menu.setup_menu(build_position)
-	_build_menu.show()
-	_build_menu_displayed = true
+	if Gm.get_debug_mode_type() != BuildingData.Debug_Building_Type.ROGUELITE:
+		if _build_menu == null:
+			_build_menu = Data.build_menu.duplicate()
+			add_child(_build_menu)
+
+		_build_menu.global_position = Vector2(build_position.x + 32, build_position.y)
+		_build_menu.setup_menu(build_position)
+		_build_menu.show()
+		_build_menu_displayed = true
 
 
 func _hide_build_menu() -> void:
@@ -118,4 +120,9 @@ func _setup_grid() -> void:
 
 func _add_building(new_building:Building) -> void:
 	var coords:Vector2i = Vector2i(new_building.global_position.x-Data.CELL_SIZE/2, new_building.global_position.y-Data.CELL_SIZE/2) / Data.CELL_SIZE
+	new_building.grid_coords = coords
 	_grid[coords] = new_building
+
+
+func _remove_building(building:Building) -> void:
+	_grid[building.grid_coords] = null

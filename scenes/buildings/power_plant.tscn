@@ -15,7 +15,8 @@ metadata/_custom_type_script = "uid://ckg6lsrqg0ws5"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_5nqxb")
 
-[node name="TileMapLayer" type="TileMapLayer" parent="."]
+[node name="normal" type="TileMapLayer" parent="."]
+unique_name_in_owner = true
 position = Vector2(-32, -32)
 tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 15, 0, 2, 0, 0, 0)
 tile_set = ExtResource("2_fp8at")

@@ -1,0 +1,107 @@
+[gd_scene load_steps=4 format=3 uid="uid://qpvdsbwa0q5q"]
+
+[ext_resource type="Script" uid="uid://dimhfdfy0nl83" path="res://code/ui/result_screen.gd" id="1_3ubwy"]
+[ext_resource type="Texture2D" uid="uid://ckib3n2gsdvoo" path="res://textures/Border/panel-border-013.png" id="2_vmyrh"]
+[ext_resource type="Texture2D" uid="uid://b8r7iijmngc4n" path="res://textures/Divider Fade/divider-fade-000.png" id="3_gm1r0"]
+
+[node name="ResultScreen" type="Control"]
+process_mode = 3
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_3ubwy")
+id = &"result_screen"
+metadata/_custom_type_script = "uid://djv2srvbephrn"
+
+[node name="back_panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(1930, 1090)
+layout_mode = 0
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 1925.0
+offset_bottom = 1085.0
+theme_type_variation = &"ResultBackPanel"
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+custom_minimum_size = Vector2(1.536, 864)
+layout_mode = 0
+offset_left = 192.0
+offset_top = 108.0
+offset_right = 1728.0
+offset_bottom = 972.0
+texture = ExtResource("2_vmyrh")
+region_rect = Rect2(0, 0, 48, 48)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 0
+offset_left = 768.0
+offset_top = 286.0
+offset_right = 968.0
+offset_bottom = 326.0
+scale = Vector2(2, 2)
+
+[node name="divider" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+texture = ExtResource("3_gm1r0")
+
+[node name="divider2" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+texture = ExtResource("3_gm1r0")
+flip_h = true
+
+[node name="result_title" type="Label" parent="."]
+custom_minimum_size = Vector2(1920, 128)
+layout_mode = 0
+offset_top = 128.0
+offset_right = 1920.0
+offset_bottom = 256.0
+theme_type_variation = &"ResultTitleLabel"
+text = "match Over!"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="result_text" type="Label" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(1920, 256)
+layout_mode = 0
+offset_top = 384.0
+offset_right = 1920.0
+offset_bottom = 640.0
+theme_type_variation = &"ResultTextLabel"
+text = "result text"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="time_survived" type="Label" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(1920, 128)
+layout_mode = 0
+offset_top = 640.0
+offset_right = 1920.0
+offset_bottom = 768.0
+theme_type_variation = &"ResultTextLabel"
+text = "time survived:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="btn_return" type="Button" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(256, 64)
+layout_mode = 0
+offset_left = 1409.0
+offset_top = 854.0
+offset_right = 1665.0
+offset_bottom = 918.0
+text = "MAIN MENU"

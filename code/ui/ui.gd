@@ -75,17 +75,9 @@ func _display_result_screen(won:bool) -> void:
 
 func _button_handing(destination:StringName) -> void:
 	match destination:
-		&"tick_play":
-			Signals.debug_game_mode_type.emit(BuildingData.Debug_Building_Type.TICK)
-			Signals.load_scene.emit(&"level", true, true)
-			Signals.kill_node.emit(&"main_menu")
-		&"placement_play":
-			Signals.debug_game_mode_type.emit(BuildingData.Debug_Building_Type.PLACEMENT)
+		&"play":
+			Signals.debug_game_mode_type.emit(BuildingData.Building_Type.PLACEMENT)
 			Signals.load_scene.emit(&"placement_level", true, true)
-			Signals.kill_node.emit(&"main_menu")
-		&"rogue_play":
-			Signals.debug_game_mode_type.emit(BuildingData.Debug_Building_Type.ROGUELITE)
-			Signals.load_scene.emit(&"rogue_level", true, true)
 			Signals.kill_node.emit(&"main_menu")
 		_:
 			pass

@@ -28,7 +28,7 @@ func _ready() -> void:
 
 
 func _display_build_menu(build_position:Vector2 = Vector2(640, 360)) -> void:
-	if Gm.get_debug_mode_type() != BuildingData.Debug_Building_Type.ROGUELITE:
+	if Gm.get_gamemode() != BuildingData.Building_Type.ROGUELITE:
 		if _build_menu == null:
 			_build_menu = Data.build_menu.duplicate()
 			add_child(_build_menu)

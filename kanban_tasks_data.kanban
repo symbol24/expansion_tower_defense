@@ -28,24 +28,47 @@
 			"tasks": [
 				"57dc5033-8b01-4520-89b8-46136b6b642e",
 				"81481eb1-b033-4206-becf-c26a33003ae1",
-				"4cf89e4c-7fa8-4394-8a35-a5a28fec1f92",
-				"20ccdc09-5aa2-4eb1-8f2a-5abbcc91e59c",
-				"6a7831fa-30e1-43cc-91d3-73f31e8ca76c",
 				"8bd3e57b-4688-4729-8d91-4b320039aaf3",
-				"7a40a31b-d647-4e98-9005-36345b41bd60"
+				"7a40a31b-d647-4e98-9005-36345b41bd60",
+				"85044ea2-8b2f-444a-9930-ad9b59db3cb8",
+				"44ffc3b2-327b-48f8-8c2a-10e4c124bd1b",
+				"4f7e1c1e-0045-4405-8293-843e6210ec84",
+				"b3b23baa-7ce1-4752-9c42-4b3849b031c2",
+				"38e5c51c-35eb-43c1-904e-746815c9edab",
+				"c7c4431b-163d-4319-af31-fdd8625bb4cf",
+				"e3acffd1-19f9-4bb5-be0d-811267bef8e4",
+				"8a000185-b83f-4d08-9082-d9b0ad40d439",
+				"b4a4f97d-0817-4ecc-98db-0674e14d347a",
+				"a9f186cd-8c61-4662-8aa6-65eb13f98704",
+				"b71e6a5f-3ff9-4cba-b896-afa5750b9058",
+				"6291ffe6-a9d6-4815-a0c9-9c05d316eb2b",
+				"3eb0ca7f-a1da-41c2-96fb-6f464d66a9ca",
+				"c786d6de-2ebe-478c-83c2-78bb28a9192f",
+				"62749672-5ce5-4bfa-936b-d3c5148f1880",
+				"67dc7088-c542-4ddc-ba6b-e510b6568e4f",
+				"d52fc2b4-33bf-4dfc-b7b3-098d8a380233",
+				"d696826c-e435-429f-8316-51b1caf34559",
+				"9ccf502d-d378-447c-8daf-e498958492a0",
+				"70801aac-1700-4976-bd64-65bad2801d3d",
+				"27a97422-05b0-49aa-bb76-7ec71c0ff210",
+				"333883be-ac4e-41c3-be31-3dde4411cd18"
 			]
 		},
 		{
 			"uuid": "29dc5a96-8531-4164-ae87-9bdafe8524ec",
 			"title": "Doing",
-			"tasks": [
-				"a2bea21f-f17d-48b0-ba4b-52f40fe4b0a1"
-			]
+			"tasks": []
 		},
 		{
 			"uuid": "530cd6e9-8912-45fa-8886-3930828f32c4",
 			"title": "Done",
-			"tasks": []
+			"tasks": [
+				"4cf89e4c-7fa8-4394-8a35-a5a28fec1f92",
+				"647d79e8-19f3-4705-bf70-c577b4771be5",
+				"20ccdc09-5aa2-4eb1-8f2a-5abbcc91e59c",
+				"6a7831fa-30e1-43cc-91d3-73f31e8ca76c",
+				"a2bea21f-f17d-48b0-ba4b-52f40fe4b0a1"
+			]
 		}
 	],
 	"tasks": [
@@ -66,7 +89,7 @@
 		{
 			"uuid": "4cf89e4c-7fa8-4394-8a35-a5a28fec1f92",
 			"title": "Decide what playstyle we want",
-			"description": "- placement with resources from kills?\n- roguelite round progression?",
+			"description": "PLACEMENT!\n\n- placement with resources from kills?\n- roguelite round progression?\n\n\n",
 			"category": "66e9b968-896c-4e14-b405-d9eeda2e4d76",
 			"steps": []
 		},
@@ -101,8 +124,169 @@
 		{
 			"uuid": "7a40a31b-d647-4e98-9005-36345b41bd60",
 			"title": "Decide on look and theme",
-			"description": "- GB?\n- Retro futuristic?\n- Dinos?\n- of RL how does the fail/reset work?",
+			"description": "- GB?\n- Retro futuristic?\n- Dinos?\n- of RL how does the fail/reset work?\n\n\nIts Dino scifi you are the herbivors, and carnivors are attacking\n\nIncremental game",
 			"category": "2de994b9-12e3-4cbc-8232-90f7f457a0c7",
+			"steps": []
+		},
+		{
+			"uuid": "647d79e8-19f3-4705-bf70-c577b4771be5",
+			"title": "BUILDINGS",
+			"description": "BANKS:\n- 0.01 chance \n- +1 max range of \n- +1 min range of \n- 0.01 chance to multiply \n- 0.01 multiplier\n\nFACTORY:\n- 0.01 chance \n- +1 max range of \n- +1 min range of \n- 0.01 chance to multiply \n- 0.01 multiplier\n\nPOWER:\n- small:\n\t- plus amount: low cost\n\t- small power cost reduction: mid cost\n- medium:\n\t- plus amount: low cost\n\t- medium power cost reduction: mid cost\n- large:\n\t- plus amount: mid cost\n\t- high power cost reduction: high cost\n\t- power multi to smaller: high cost\n- very large:\n\t- plus amount: high cost\n\t- power multi to smaller: very high cost\n\nTURRETS:\n- 25 degree: long range: mid cost\n\t- sniper\n\t- single missle\n- 60 degree: mid-long range: mid cost\n\t- gaus gun\n- 90 degree: mid range: low cost\n\t- machien gun\n\t- rockets\n- 180 degree: mid range: high cost\n\t- laser\n- 360 degree: short range: very high cost\n\t- tesla coil\n\nDEFENSIVE:\n- mines:\n\t- low cost\n\t- one tile\n\t- low use count before destroyed\n\t- high damage\n- bollards:\n\t- low cost\n\t- one tile\n\t- hi life\n\t- no damage\n- Repulser:\n\t- mid cost\n\t- emits a 45 degree ray, mid range\n\t- slows enemies\n\t- mid hp\n\t- no damage\n\nUPGRADES:\n- base damage boost\n- damage multiplier\n- projectile speeds\n- building armor\n- building life\n- Research/unlock building",
+			"category": "66e9b968-896c-4e14-b405-d9eeda2e4d76",
+			"steps": []
+		},
+		{
+			"uuid": "44ffc3b2-327b-48f8-8c2a-10e4c124bd1b",
+			"title": "+1 min range bank",
+			"description": "",
+			"category": "a6444aff-ce31-41ad-85c9-a1c32fc914f0",
+			"steps": []
+		},
+		{
+			"uuid": "4f7e1c1e-0045-4405-8293-843e6210ec84",
+			"title": "+1 max range bank",
+			"description": "",
+			"category": "a6444aff-ce31-41ad-85c9-a1c32fc914f0",
+			"steps": []
+		},
+		{
+			"uuid": "b3b23baa-7ce1-4752-9c42-4b3849b031c2",
+			"title": "+0.01 chance multiplier bank",
+			"description": "",
+			"category": "a6444aff-ce31-41ad-85c9-a1c32fc914f0",
+			"steps": []
+		},
+		{
+			"uuid": "38e5c51c-35eb-43c1-904e-746815c9edab",
+			"title": "+0.1 value multiplier bank",
+			"description": "",
+			"category": "a6444aff-ce31-41ad-85c9-a1c32fc914f0",
+			"steps": []
+		},
+		{
+			"uuid": "85044ea2-8b2f-444a-9930-ad9b59db3cb8",
+			"title": "make resources support new banks and factories",
+			"description": "",
+			"category": "a6444aff-ce31-41ad-85c9-a1c32fc914f0",
+			"steps": []
+		},
+		{
+			"uuid": "c7c4431b-163d-4319-af31-fdd8625bb4cf",
+			"title": "+1 min range factory",
+			"description": "",
+			"category": "a6444aff-ce31-41ad-85c9-a1c32fc914f0",
+			"steps": []
+		},
+		{
+			"uuid": "e3acffd1-19f9-4bb5-be0d-811267bef8e4",
+			"title": "+1 max range factory",
+			"description": "",
+			"category": "a6444aff-ce31-41ad-85c9-a1c32fc914f0",
+			"steps": []
+		},
+		{
+			"uuid": "8a000185-b83f-4d08-9082-d9b0ad40d439",
+			"title": "+0.01 chance mulitplier factory",
+			"description": "",
+			"category": "a6444aff-ce31-41ad-85c9-a1c32fc914f0",
+			"steps": []
+		},
+		{
+			"uuid": "b4a4f97d-0817-4ecc-98db-0674e14d347a",
+			"title": "+0.1 value multiplier factory",
+			"description": "",
+			"category": "a6444aff-ce31-41ad-85c9-a1c32fc914f0",
+			"steps": []
+		},
+		{
+			"uuid": "a9f186cd-8c61-4662-8aa6-65eb13f98704",
+			"title": "make buildings support power reduction cost power plants",
+			"description": "",
+			"category": "a6444aff-ce31-41ad-85c9-a1c32fc914f0",
+			"steps": []
+		},
+		{
+			"uuid": "b71e6a5f-3ff9-4cba-b896-afa5750b9058",
+			"title": "make power generation support multiplication from certain buildings",
+			"description": "",
+			"category": "a6444aff-ce31-41ad-85c9-a1c32fc914f0",
+			"steps": []
+		},
+		{
+			"uuid": "6291ffe6-a9d6-4815-a0c9-9c05d316eb2b",
+			"title": "small power plants:",
+			"description": "- small generator\n- small reducer",
+			"category": "a6444aff-ce31-41ad-85c9-a1c32fc914f0",
+			"steps": []
+		},
+		{
+			"uuid": "3eb0ca7f-a1da-41c2-96fb-6f464d66a9ca",
+			"title": "medium power plants",
+			"description": "- generator\n- reducer\n",
+			"category": "a6444aff-ce31-41ad-85c9-a1c32fc914f0",
+			"steps": []
+		},
+		{
+			"uuid": "c786d6de-2ebe-478c-83c2-78bb28a9192f",
+			"title": "large power plants",
+			"description": "- generator\n- reducer\n- multiplier\n",
+			"category": "a6444aff-ce31-41ad-85c9-a1c32fc914f0",
+			"steps": []
+		},
+		{
+			"uuid": "62749672-5ce5-4bfa-936b-d3c5148f1880",
+			"title": "very large power plants",
+			"description": "- generator\n- multiplier",
+			"category": "a6444aff-ce31-41ad-85c9-a1c32fc914f0",
+			"steps": []
+		},
+		{
+			"uuid": "67dc7088-c542-4ddc-ba6b-e510b6568e4f",
+			"title": "make turrets support arcs of fire",
+			"description": "",
+			"category": "a6444aff-ce31-41ad-85c9-a1c32fc914f0",
+			"steps": []
+		},
+		{
+			"uuid": "d52fc2b4-33bf-4dfc-b7b3-098d8a380233",
+			"title": "add orientation on turrets to allow arc placements",
+			"description": "",
+			"category": "a6444aff-ce31-41ad-85c9-a1c32fc914f0",
+			"steps": []
+		},
+		{
+			"uuid": "d696826c-e435-429f-8316-51b1caf34559",
+			"title": "create an objective system for unlocks and achievements",
+			"description": "",
+			"category": "2de994b9-12e3-4cbc-8232-90f7f457a0c7",
+			"steps": []
+		},
+		{
+			"uuid": "9ccf502d-d378-447c-8daf-e498958492a0",
+			"title": "create mines",
+			"description": "",
+			"category": "a6444aff-ce31-41ad-85c9-a1c32fc914f0",
+			"steps": []
+		},
+		{
+			"uuid": "70801aac-1700-4976-bd64-65bad2801d3d",
+			"title": "create bollards",
+			"description": "",
+			"category": "a6444aff-ce31-41ad-85c9-a1c32fc914f0",
+			"steps": []
+		},
+		{
+			"uuid": "27a97422-05b0-49aa-bb76-7ec71c0ff210",
+			"title": "repulsar tower",
+			"description": "- make enemies slowable",
+			"category": "a6444aff-ce31-41ad-85c9-a1c32fc914f0",
+			"steps": []
+		},
+		{
+			"uuid": "333883be-ac4e-41c3-be31-3dde4411cd18",
+			"title": "flesh out effect system",
+			"description": "",
+			"category": "a6444aff-ce31-41ad-85c9-a1c32fc914f0",
 			"steps": []
 		}
 	],

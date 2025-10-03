@@ -44,8 +44,8 @@ func purchase_building(building_data:BuildingData) -> void:
 
 func _setup_starting_buildings() -> void:
 	var to_setup := []
-	match Gm.get_debug_mode_type():
-		BuildingData.Debug_Building_Type.PLACEMENT:
+	match Gm.get_gamemode():
+		BuildingData.Building_Type.PLACEMENT:
 			to_setup = PLACEMENT_BUILDINGS
 		_:
 			to_setup = TICK_BUILDINGS

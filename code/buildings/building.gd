@@ -86,7 +86,7 @@ func _mouse_exit() -> void:
 
 
 func _trigger_building() -> void:
-	if data.building_type == BuildingData.Debug_Building_Type.TICK:
+	if data.building_type == BuildingData.Building_Type.TICK:
 		if data.money_production > 0:
 			Signals.spawn_resource_floater.emit("coin", Vector2(global_position.x + randf_range(-20, 0), global_position.y))
 		if data.material_production > 0:

@@ -5,7 +5,7 @@ var player_data:PlayerData
 var _timers_active := false
 var _active_level_timer := 0.0
 var _last_match_timer := 0.0
-var _mode_type:BuildingData.Debug_Building_Type
+var _mode_type:BuildingData.Building_Type
 
 
 func _ready() -> void:
@@ -34,7 +34,7 @@ func get_last_match_timer() -> String:
 	return _get_time_as_string(_last_match_timer)
 
 
-func get_debug_mode_type() -> BuildingData.Debug_Building_Type:
+func get_gamemode() -> BuildingData.Building_Type:
 	return _mode_type
 
 
@@ -74,5 +74,5 @@ func _get_time_as_string(_timer:float) -> String:
 	return "%02d:%02d.%03d" % [mins, sec, msec]
 
 
-func _set_mode_type(type:BuildingData.Debug_Building_Type) -> void:
+func _set_mode_type(type:BuildingData.Building_Type) -> void:
 	_mode_type = type

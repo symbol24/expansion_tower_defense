@@ -1,7 +1,7 @@
 class_name BuildingData extends Resource
 
 
-enum Debug_Building_Type {TICK, PLACEMENT, ROGUELITE}
+enum Building_Type {TICK, PLACEMENT, ROGUELITE}
 
 
 @export var id := &""
@@ -31,7 +31,7 @@ var max_hp := 100.0
 var is_active := false
 
 @export_category("DEGUG")
-@export var building_type:Debug_Building_Type
+@export var building_type:Building_Type
 
 
 func setup_building_data() -> void:

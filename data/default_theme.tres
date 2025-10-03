@@ -1,8 +1,9 @@
-[gd_resource type="Theme" load_steps=18 format=3 uid="uid://b62vl07cjqys3"]
+[gd_resource type="Theme" load_steps=21 format=3 uid="uid://b62vl07cjqys3"]
 
 [ext_resource type="Texture2D" uid="uid://bv2ipisthc1ns" path="res://textures/Border/panel-border-025.png" id="1_uiit7"]
 [ext_resource type="FontFile" uid="uid://tekr0gmalfw5" path="res://data/m5x7.ttf" id="1_x3fhk"]
 [ext_resource type="Texture2D" uid="uid://bq3hqrm28tlsd" path="res://textures/Transparent center/panel-transparent-center-000.png" id="2_47hc6"]
+[ext_resource type="Texture2D" uid="uid://dyubhfx66igs7" path="res://textures/Transparent center/panel-transparent-center-015.png" id="3_yoa6b"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vjq4v"]
 content_margin_left = 10.0
@@ -70,6 +71,21 @@ modulate_color = Color(1, 1, 1, 0.5254902)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8doc8"]
 bg_color = Color(0.07450981, 0.07450981, 0.07450981, 0.70980394)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8doc8"]
+texture = ExtResource("3_yoa6b")
+texture_margin_left = 10.0074
+texture_margin_top = 10.060591
+texture_margin_right = 10.029963
+texture_margin_bottom = 10.028242
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l20vp"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0.50980395, 0.50980395, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oxuqd"]
 bg_color = Color(0.176471, 0.176471, 0.176471, 0.54902)
@@ -170,6 +186,10 @@ ResultTextLabel/base_type = &"Label"
 ResultTextLabel/font_sizes/font_size = 64
 ResultTitleLabel/base_type = &"Label"
 ResultTitleLabel/font_sizes/font_size = 128
+RogueBuildingBtnBack/base_type = &"Panel"
+RogueBuildingBtnBack/styles/panel = SubResource("StyleBoxTexture_8doc8")
+RogueBuildingBtnOver/base_type = &"Panel"
+RogueBuildingBtnOver/styles/panel = SubResource("StyleBoxFlat_l20vp")
 building_hp_bar/base_type = &"ProgressBar"
 building_hp_bar/styles/background = SubResource("StyleBoxFlat_oxuqd")
 building_hp_bar/styles/fill = SubResource("StyleBoxFlat_x3fhk")

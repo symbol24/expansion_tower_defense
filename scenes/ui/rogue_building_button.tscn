@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://clkbk6m0sfkbf"]
+
+[ext_resource type="TileSet" uid="uid://dd61axkqlofl7" path="res://data/tileset/level_tileset.tres" id="1_562rj"]
+[ext_resource type="Script" uid="uid://cw77pip2dxqgo" path="res://code/ui/rogue_building_button.gd" id="1_aqutp"]
+
+[node name="rogue_building_button" type="Control"]
+process_mode = 1
+custom_minimum_size = Vector2(72, 72)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1848.0
+offset_bottom = -1008.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_aqutp")
+
+[node name="back" type="Panel" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(72, 72)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_type_variation = &"RogueBuildingBtnBack"
+
+[node name="icon" type="TileMapLayer" parent="."]
+unique_name_in_owner = true
+visible = false
+position = Vector2(4, 4)
+tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 17, 0, 1, 0, 0, 0)
+tile_set = ExtResource("1_562rj")
+
+[node name="over" type="Panel" parent="."]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(72, 72)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_type_variation = &"RogueBuildingBtnOver"
+
+[node name="mouse_detector" type="Control" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(72, 72)
+anchors_preset = 0
+offset_right = 72.0
+offset_bottom = 72.0

@@ -73,35 +73,14 @@ patch_margin_bottom = 10
 axis_stretch_horizontal = 2
 axis_stretch_vertical = 2
 
-[node name="buttons" type="HBoxContainer" parent="."]
-custom_minimum_size = Vector2(920, 0)
+[node name="placement_play" type="Button" parent="."]
+custom_minimum_size = Vector2(448, 128)
 layout_mode = 0
-offset_left = 268.0
+offset_left = 736.0
 offset_top = 416.0
-offset_right = 1652.0
+offset_right = 1184.0
 offset_bottom = 544.0
-theme_override_constants/separation = 20
-
-[node name="tick_play" type="Button" parent="buttons"]
-custom_minimum_size = Vector2(448, 128)
-layout_mode = 2
 theme_override_font_sizes/font_size = 72
-text = "TICK PLAY"
+text = "PLAY"
 script = ExtResource("2_fe2o3")
-destination = &"tick_play"
-
-[node name="placement_play" type="Button" parent="buttons"]
-custom_minimum_size = Vector2(448, 128)
-layout_mode = 2
-theme_override_font_sizes/font_size = 72
-text = "PLACEMENT PLAY"
-script = ExtResource("2_fe2o3")
-destination = &"placement_play"
-
-[node name="rogue_play" type="Button" parent="buttons"]
-custom_minimum_size = Vector2(448, 128)
-layout_mode = 2
-theme_override_font_sizes/font_size = 72
-text = "ROGUE PLAY"
-script = ExtResource("2_fe2o3")
-destination = &"rogue_play"
+destination = &"play"

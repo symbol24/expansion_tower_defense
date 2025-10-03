@@ -55,4 +55,4 @@ signal check_death_for_resources(position:Vector2)
 # OTHER
 signal level_ready
 signal kill_node(id:StringName)
-signal debug_game_mode_type(type:BuildingData.Debug_Building_Type)
+signal debug_game_mode_type(type:BuildingData.Building_Type)

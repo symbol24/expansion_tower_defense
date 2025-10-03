@@ -192,6 +192,25 @@ text = "00:00:00"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="rogue_panel" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(1080, 128)
+layout_mode = 0
+offset_left = 420.0
+offset_top = 824.0
+offset_right = 1500.0
+offset_bottom = 952.0
+theme_type_variation = &"ResourcePanel"
+metadata/_edit_lock_ = true
+
+[node name="button_hbox" type="HBoxContainer" parent="rogue_panel"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(72, 72)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 20
+
 [node name="resource_icon_floaters" type="Control" parent="."]
 custom_minimum_size = Vector2(1920, 1080)
 anchors_preset = 0

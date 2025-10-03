@@ -20,6 +20,8 @@ const BUILD_MENU_PATH := "res://scenes/ui/build_menu.tscn"
 const BUILD_BUTTON_PATH := "res://scenes/ui/building_button.tscn"
 const FLOATER_COIN_PATH := "res://scenes/ui/floater_coin.tscn"
 const FLOATER_MATERIALS_PATH := "res://scenes/ui/floater_material.tscn"
+const ROGUE_BTN_COUNT := 11
+const ROGUE_BUILDING_BTN_PATH := "res://scenes/ui/rogue_building_button.tscn"
 
 # BUILDINGS
 const OFFSET := Vector2(CELL_SIZE/2.0, CELL_SIZE/2.0)

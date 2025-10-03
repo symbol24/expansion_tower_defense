@@ -15,8 +15,8 @@ func _ready() -> void:
 
 
 func _build_tower() -> void:
-	match Gm.get_debug_mode_type():
-		BuildingData.Debug_Building_Type.PLACEMENT:
+	match Gm.get_gamemode():
+		BuildingData.Building_Type.PLACEMENT:
 			_build(Data.PLACEMENT_TOWER_DATA.duplicate(), _first_spawn_point)
 		_:
 			_build(Data.TOWER_DATA.duplicate(), _first_spawn_point)
@@ -59,7 +59,7 @@ func _remove_building(building:Building) -> void:
 
 
 func _check_for_resources(pos:Vector2) -> void:
-	if Gm.get_debug_mode_type() != BuildingData.Debug_Building_Type.TICK:
+	if Gm.get_gamemode() != BuildingData.Building_Type.TICK:
 		var money_chance := _get_chance_of_money()
 		var money_over := money_chance - 1.0 if money_chance > 1.0 else 0.0
 		var money := 0
